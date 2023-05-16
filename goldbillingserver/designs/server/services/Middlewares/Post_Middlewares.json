@@ -1,0 +1,170 @@
+[
+    {
+        "id": "SSD_SERVICE_ID_sd_OQYJSSTIEwN2nkED",
+        "type": "tab",
+        "createdDate": "2023-04-27T11:41:14.198Z",
+        "label": "Post_Middlewares",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "Post_Middlewares",
+        "relativeParentPath": "Middlewares"
+    },
+    {
+        "id": "sd_eva1cbamE2ymKj38",
+        "type": "Start",
+        "z": "SSD_SERVICE_ID_sd_OQYJSSTIEwN2nkED",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "HttpOut_Start",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "accept_bh": true,
+        "functionName": "httpOut_Start",
+        "category": "General",
+        "x": 145,
+        "y": 80,
+        "wires": [
+            [
+                "sd_bYJdvDf7twTpJdpI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "Post_Middlewares"
+    },
+    {
+        "id": "sd_bYJdvDf7twTpJdpI",
+        "type": "HttpOut",
+        "z": "SSD_SERVICE_ID_sd_OQYJSSTIEwN2nkED",
+        "viewType": "server",
+        "nodeType": "flow",
+        "name": "HttpOut",
+        "headers": {},
+        "responseBody": {
+            "type": "bh.local",
+            "value": "responces",
+            "ssd_typedInputField": true
+        },
+        "httpcode": {
+            "type": "bh.local",
+            "value": "responces.statusCode",
+            "ssd_typedInputField": true
+        },
+        "responseType": "obj",
+        "swaggerResponse": {},
+        "responseMapping": {
+            "status": "bh.local.responces.statusCode",
+            "obj": "bh.local.responces",
+            "send": "bh.local.responces"
+        },
+        "dataModelIsArray": false,
+        "cookies": [],
+        "inputs": 1,
+        "outputs": 0,
+        "erd": "",
+        "entity": "",
+        "ref": "",
+        "editableListData": {
+            "headers": [],
+            "produces": [],
+            "responses": []
+        },
+        "cookiesList": {},
+        "switchStates": {
+            "headers": "Map",
+            "cookies": "Map"
+        },
+        "functionName": "httpOut",
+        "category": "HTTP",
+        "x": 345,
+        "y": 80,
+        "wires": [],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "Post_Middlewares",
+        "generated": true
+    },
+    {
+        "id": "sd_jr8kV0nrmsr3HGnV",
+        "type": "Start",
+        "z": "SSD_SERVICE_ID_sd_OQYJSSTIEwN2nkED",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "Http_Out_And_Cookie",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "accept_bh": true,
+        "functionName": "http_Out_And_Cookie",
+        "category": "General",
+        "x": 145,
+        "y": 240,
+        "wires": [
+            [
+                "sd_leItYu7OSd66r3nz"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "Post_Middlewares"
+    },
+    {
+        "id": "sd_leItYu7OSd66r3nz",
+        "type": "HttpOut",
+        "z": "SSD_SERVICE_ID_sd_OQYJSSTIEwN2nkED",
+        "viewType": "server",
+        "nodeType": "flow",
+        "name": "cookie_out",
+        "headers": {},
+        "responseBody": {
+            "type": "bh.local",
+            "value": "responces",
+            "ssd_typedInputField": true
+        },
+        "httpcode": {
+            "type": "num",
+            "value": 200,
+            "ssd_typedInputField": true
+        },
+        "responseType": "obj",
+        "swaggerResponse": {},
+        "responseMapping": {
+            "status": 200,
+            "obj": "bh.local.responces",
+            "send": "bh.local.responces"
+        },
+        "dataModelIsArray": false,
+        "cookies": {
+            "type": "bh.local",
+            "value": "cookie_data",
+            "ssd_typedInputField": true
+        },
+        "inputs": 1,
+        "outputs": 0,
+        "erd": "",
+        "entity": "",
+        "ref": "",
+        "editableListData": {
+            "headers": [],
+            "produces": [],
+            "responses": []
+        },
+        "cookiesList": {},
+        "switchStates": {
+            "headers": "Map",
+            "cookies": "Value"
+        },
+        "functionName": "cookie_out",
+        "category": "HTTP",
+        "x": 360,
+        "y": 240,
+        "wires": [],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "Post_Middlewares",
+        "generated": true
+    }
+]

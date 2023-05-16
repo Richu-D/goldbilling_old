@@ -1,0 +1,245 @@
+{
+    "7dd3627f-f583-7c44-e364-95d34aa92af0": {
+        "paletteKey": "FlexLayoutCol",
+        "commentid": null,
+        "designerReference": [
+            {
+                "_key": "componentLabel",
+                "_value": "Column",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "_key": "style",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "class",
+                "_value": [
+                    "cart"
+                ],
+                "_type": "dav",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxFlex",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxLayoutGap",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "wrap",
+                "_value": "wrap",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "layoutAlign",
+                "_value": "space-evenly",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "pLayoutAlign",
+                "_value": "center",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "[fxShow]",
+                "_value": "true",
+                "_type": "kv",
+                "_attrDef": "p"
+            }
+        ],
+        "acc43786-6fe7-99d9-774a-4bba5675f485": {
+            "paletteKey": "NEUTRINOS_VIEW_CartDetails",
+            "parentEditorKey": "7dd3627f-f583-7c44-e364-95d34aa92af0",
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "componentLabel",
+                    "_value": "CartDetails",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": [
+                        "cart-details"
+                    ],
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "[values]",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_complexity": "advanced",
+                    "displayAs": "values",
+                    "attrType": "INPUT",
+                    "inValid": false,
+                    "message": "",
+                    "_customAttributeFlag": "flowpicker"
+                },
+                {
+                    "_key": "(grandTotal)",
+                    "_value": "onFetching($event)",
+                    "_type": "kv",
+                    "_attrDef": "c",
+                    "_customAttributeFlag": "flowpicker",
+                    "objValue": {
+                        "nodeID": "sd_F93tEW0ZZl8QpWkw",
+                        "functionName": "onFetching",
+                        "activeTree": "pages",
+                        "z": "sd_kbL4ZdpFNfaZmA0H",
+                        "input": [
+                            "$event"
+                        ]
+                    }
+                },
+                {
+                    "_key": "[newVariable]",
+                    "_value": "page.changes",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_complexity": "advanced",
+                    "displayAs": "newVariable",
+                    "attrType": "INPUT"
+                }
+            ]
+        },
+        "81c3388d-267d-1464-084c-62856e323216": {
+            "paletteKey": "NEUTRINOS_VIEW_ProductList",
+            "parentEditorKey": "7dd3627f-f583-7c44-e364-95d34aa92af0",
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "componentLabel",
+                    "_value": "ProductList",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": [
+                        "list-items"
+                    ],
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "(fetching)",
+                    "_value": "onFetchingData($event)",
+                    "_type": "kv",
+                    "_attrDef": "c",
+                    "_customAttributeFlag": "flowpicker",
+                    "objValue": {
+                        "nodeID": "sd_xUEcK0eQPpMlynF8",
+                        "functionName": "onFetchingData",
+                        "activeTree": "pages",
+                        "z": "sd_kbL4ZdpFNfaZmA0H",
+                        "input": [
+                            "$event"
+                        ]
+                    }
+                }
+            ]
+        },
+        "bf92f6f8-31b4-6932-8d69-4de1ac247ca8": {
+            "paletteKey": "NG-button",
+            "parentEditorKey": "7dd3627f-f583-7c44-e364-95d34aa92af0",
+            "commentid": null,
+            "designerReference": [
+                {
+                    "_key": "style",
+                    "_value": "border-radius: 10px;",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": [
+                        "payment-button"
+                    ],
+                    "_type": "dav",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "buttonname",
+                    "_value": "Check out",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "color",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "(click)",
+                    "_value": "payment()",
+                    "_type": "kv",
+                    "_attrDef": "p",
+                    "objValue": {
+                        "nodeID": "sd_eeCB2d2lVG6wx0nO",
+                        "functionName": "payment",
+                        "activeTree": "pages",
+                        "z": "sd_kbL4ZdpFNfaZmA0H",
+                        "input": []
+                    }
+                },
+                {
+                    "_key": "[disabled]",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "[disableRipple]",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "type",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "routerLink",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                }
+            ]
+        }
+    }
+}

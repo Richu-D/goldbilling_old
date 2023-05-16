@@ -1,0 +1,35 @@
+<div fxLayout="row wrap" class="customer-details" fxLayoutAlign="center center" [fxShow]="true">
+  <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+    <div class="customer-heading">
+      <h1>Customer Details</h1>
+    </div>
+    <div fxLayout="column wrap" class="customer-details-enter" fxLayoutAlign="center center" [fxShow]="true">
+      <form [formGroup]="page.addCustomer" style="display: flex; flex-direction: column; align-items: center;">
+        <mat-form-field style="display: none;" class="customer-details-text" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="Temp" [required]="false" formControlName="temp">
+
+        </mat-form-field>
+        <mat-form-field class="customer-details-text" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="Name" [required]="false" formControlName="name">
+
+        </mat-form-field>
+        <mat-form-field class="customer-details-text" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="Email" [required]="false" formControlName="email">
+
+        </mat-form-field>
+        <mat-form-field class="customer-details-text" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput type="number" placeholder="Phone" [required]="false" formControlName="phone">
+
+        </mat-form-field>
+        <mat-form-field class="customer-details-text" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="Address" [required]="false" formControlName="address">
+
+        </mat-form-field>
+        <mat-form-field class="customer-details-text" [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+          <input matInput placeholder="City" [required]="false" formControlName="city">
+
+        </mat-form-field><button mat-button class="scan-id-button" (click)="addCustomer()">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

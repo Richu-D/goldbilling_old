@@ -1,0 +1,8 @@
+<form [formGroup]="page.addRegisterForm" style="width: 400px">
+  <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-evenly stretch" [fxShow]="true">
+    <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+      <input matInput placeholder="Input" [required]="false" formControlName="id">
+
+    </mat-form-field><button mat-button class="scan-id-button" (click)="getScannedProduct()">Submit</button>
+  </div>
+</form>

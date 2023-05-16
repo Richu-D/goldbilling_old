@@ -1,0 +1,14 @@
+export const environment = {
+    "name": "prod",
+    "properties": {
+        "production": true,
+        "ssdURL": "http://localhost:8081/api/",
+        "tenantName": "brototype",
+        "appName": "goldbillingui",
+        "namespace": "com.brototype.goldbillingui",
+        "useDefaultExceptionUI": "true",
+        "isIDSEnabled": "true",
+        "webAppMountpoint": "web",
+        "NGFORAGE_MOBILE_DRIVER": "INDEXED_DB"
+    }
+}

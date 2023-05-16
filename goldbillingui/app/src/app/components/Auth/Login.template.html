@@ -1,0 +1,12 @@
+<div fxLayout="column wrap" style="height:100vh;" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" style="height: 100%;width:100%;padding-bottom:30%" class="login-page" fxFlex="100" fxLayoutAlign="center end" [fxShow]="true">
+    <form [formGroup]="page.addRegisterForm" style="width:80%;height:25%;text-align:center;margin-bottom:0em;">
+      <div>
+        <input type="text" class="txt txt-userid" style="color: black;" formControlName="email" placeholder="User Id">
+        <input type="password" class="txt txt-password" formControlName="password" placeholder="Password">
+      </div><button mat-button style="background:#000AFF;width:100px;color:white;" (click)="login()">Login</button>
+      <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-button class="forgot-credentials" (click)="iDS()">Login with IDS</button></div>
+    </form>
+  </div>
+  <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"><bh-Navbar style="position:absolute;" class="navbar"></bh-Navbar></div>
+</div>

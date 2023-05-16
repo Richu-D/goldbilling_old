@@ -1,0 +1,32 @@
+<div fxLayout="column wrap" class="details" fxLayoutAlign="center stretch" [fxShow]="true"><mat-card fxLayoutAlign="start center" fxLayout="column" class="details-card">
+    <mat-card-content>
+      <div (click)="navigateToScan()" class="close-button-details">
+        <i class="fa-regular fa-circle-xmark"></i>
+      </div>
+    </mat-card-content>
+
+    <mat-card-title class="card-heading">Product Description</mat-card-title>
+
+    <img mat-card-image style="width: 304px;" class="card-image" [src]="page.products.product.image">
+
+    <mat-card-content align="left">
+      <div class="card-product-name">
+        <h1>{{page.products.product.name}}</h1>
+      </div>
+      <div class="card-description">
+        <p>{{page.products.product.description}}</p>
+      </div>
+      <div class="card-description">
+        <p>
+          Ratings:
+          <i class="fa-solid fa-star star" style="color: #DED957; margin-left: 30px"></i>
+          <i class="fa-solid fa-star star" style="color: #DED957"></i>
+          <i class="fa-solid fa-star star" style="color: #DED957"></i>
+          <i class="fa-solid fa-star star"></i>
+          <i class="fa-solid fa-star star"></i>
+        </p>
+      </div>
+    </mat-card-content>
+
+    <mat-card-content align="center"><button mat-button class="add-to-cart-button" (click)="navigateToCart()">Add To Cart</button></mat-card-content>
+  </mat-card></div>

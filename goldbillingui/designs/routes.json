@@ -1,0 +1,94 @@
+{
+    "routes": [
+        {
+            "path": "home",
+            "component": "HomeLayoutComponent",
+            "children": [
+                {
+                    "path": "details",
+                    "component": "DetailsComponent"
+                },
+                {
+                    "path": "cart",
+                    "component": "CartComponent"
+                },
+                {
+                    "path": "scanner",
+                    "component": "ScannerPageComponent",
+                    "children": [
+                        {
+                            "path": "enter-id",
+                            "component": "ManualCodeComponent"
+                        }
+                    ]
+                },
+                {
+                    "path": "profile",
+                    "component": "ProfileComponent"
+                },
+                {
+                    "path": "customer",
+                    "component": "CustomerDetailsComponent"
+                },
+                {
+                    "path": "home",
+                    "component": "HomePageComponent"
+                },
+                {
+                    "path": "completed",
+                    "component": "OrderPlcComponent"
+                },
+                {
+                    "path": "bill",
+                    "component": "BillComponent"
+                },
+                {
+                    "path": "orders",
+                    "component": "OrdersComponent"
+                }
+            ]
+        },
+        {
+            "path": "admin",
+            "component": "AdminHomeComponent",
+            "children": [
+                {
+                    "path": "add-products",
+                    "component": "addProductsComponent"
+                },
+                {
+                    "component": "HomeComponent",
+                    "path": "home",
+                    "children": [
+                        {
+                            "path": "all-products",
+                            "component": "ViewAllProductsComponent"
+                        }
+                    ]
+                },
+                {
+                    "path": "orders",
+                    "component": "ViewOrdersComponent"
+                }
+            ]
+        },
+        {
+            "path": "login",
+            "component": "LoginComponent"
+        },
+        {
+            "path": "admin-log",
+            "component": "AdminLoginComponent"
+        },
+        {
+            "path": "''",
+            "redirectTo": "login",
+            "pathMatch": "full",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent"
+        }
+    ]
+}

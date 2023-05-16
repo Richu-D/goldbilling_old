@@ -1,0 +1,102 @@
+[
+    {
+        "id": "sd_FoVs6gadrU2TK0XT",
+        "type": "tab",
+        "createdDate": "2023-04-27T17:39:31.597Z",
+        "label": "HomeLayout",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "HomeLayoutComponent"
+    },
+    {
+        "id": "sd_BjskyfLKhShwRaje",
+        "type": "OnInit",
+        "z": "sd_FoVs6gadrU2TK0XT",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_BjskyfLKhShwRaje",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_FHRWJRmgXgJUNEqS"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "HomeLayoutComponent",
+        "generated": false
+    },
+    {
+        "id": "sd_FHRWJRmgXgJUNEqS",
+        "type": "PageVariables",
+        "z": "sd_FoVs6gadrU2TK0XT",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_FHRWJRmgXgJUNEqS",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_G7bFj7kckghwHLDB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "HomeLayoutComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_G7bFj7kckghwHLDB",
+        "type": "PageCallService",
+        "z": "sd_FoVs6gadrU2TK0XT",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_qp1n840XhLHxXRUW",
+            "type": "tab",
+            "createdDate": "2023-05-01T12:27:41.542Z",
+            "label": "HTTPService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_EGT9Ia09cyUunsrk",
+            "flowName": "routesCheck"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/HTTPService",
+        "startName": "routesCheck",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_G7bFj7kckghwHLDB",
+        "category": "General",
+        "x": 325,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generated": true,
+        "generateNext": false,
+        "serviceName": "HomeLayoutComponent"
+    }
+]

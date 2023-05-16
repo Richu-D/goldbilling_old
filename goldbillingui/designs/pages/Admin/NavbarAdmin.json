@@ -1,0 +1,191 @@
+[
+    {
+        "id": "sd_IbAzVVoYn2wYvtuP",
+        "type": "tab",
+        "createdDate": "2023-04-30T04:43:16.208Z",
+        "label": "NavbarAdmin",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "NavbarAdminComponent"
+    },
+    {
+        "id": "sd_W4d1SlxNCDJRR4ch",
+        "type": "OnInit",
+        "z": "sd_IbAzVVoYn2wYvtuP",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_W4d1SlxNCDJRR4ch",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_9hJvnt2yCbKAIY0E"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "NavbarAdminComponent"
+    },
+    {
+        "id": "sd_9hJvnt2yCbKAIY0E",
+        "type": "PageVariables",
+        "z": "sd_IbAzVVoYn2wYvtuP",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_9hJvnt2yCbKAIY0E",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "NavbarAdminComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_h74EoP8QYZubN0JR",
+        "type": "PageStart",
+        "z": "sd_IbAzVVoYn2wYvtuP",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "adminHome",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "adminHome",
+        "category": "General",
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "sd_KTPEAMxkUuI5BCgc"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "NavbarAdminComponent"
+    },
+    {
+        "id": "sd_KTPEAMxkUuI5BCgc",
+        "type": "Navigation",
+        "z": "sd_IbAzVVoYn2wYvtuP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "pathMap": {
+            "type": "str",
+            "value": "/admin/home"
+        },
+        "functionName": "sd_KTPEAMxkUuI5BCgc",
+        "category": "Navigation",
+        "x": 325,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "NavbarAdminComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_S6209iY39WecoXYm",
+        "type": "PageStart",
+        "z": "sd_IbAzVVoYn2wYvtuP",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "addProducts",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "addProducts",
+        "category": "General",
+        "x": 145,
+        "y": 280,
+        "wires": [
+            [
+                "sd_YKyydUcZlnhbKpfH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "NavbarAdminComponent"
+    },
+    {
+        "id": "sd_YKyydUcZlnhbKpfH",
+        "type": "Navigation",
+        "z": "sd_IbAzVVoYn2wYvtuP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/admin/add-products",
+        "functionName": "sd_YKyydUcZlnhbKpfH",
+        "category": "Navigation",
+        "x": 330,
+        "y": 280,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "NavbarAdminComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_n5RXg7uDKp5xDEzr",
+        "type": "PageStart",
+        "z": "sd_IbAzVVoYn2wYvtuP",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "allOrders",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "allOrders",
+        "category": "General",
+        "x": 145,
+        "y": 400,
+        "wires": [
+            [
+                "sd_mSrT4C5WIoU6Datt"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "NavbarAdminComponent"
+    },
+    {
+        "id": "sd_mSrT4C5WIoU6Datt",
+        "type": "Navigation",
+        "z": "sd_IbAzVVoYn2wYvtuP",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/admin/orders",
+        "functionName": "sd_mSrT4C5WIoU6Datt",
+        "category": "Navigation",
+        "x": 330,
+        "y": 400,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "NavbarAdminComponent",
+        "generated": true
+    }
+]

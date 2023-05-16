@@ -1,0 +1,214 @@
+[
+    {
+        "id": "sd_ZyCxaPYUthVg121C",
+        "type": "tab",
+        "createdDate": "2023-05-05T06:19:56.491Z",
+        "label": "ManualCode",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "ManualCodeComponent"
+    },
+    {
+        "id": "sd_KIl5vCRoXaYQxEVc",
+        "type": "OnInit",
+        "z": "sd_ZyCxaPYUthVg121C",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [],
+        "functionName": "sd_KIl5vCRoXaYQxEVc",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_ylEzo8lNOPwDbT7K"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ManualCodeComponent"
+    },
+    {
+        "id": "sd_ylEzo8lNOPwDbT7K",
+        "type": "PageVariables",
+        "z": "sd_ZyCxaPYUthVg121C",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_ylEzo8lNOPwDbT7K",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_QTvmX0mLARrMtuhv"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ManualCodeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_FkNS1ju9HeFytBGH",
+        "type": "PageStart",
+        "z": "sd_ZyCxaPYUthVg121C",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "getScannedProduct",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "getScannedProduct",
+        "category": "General",
+        "x": 185,
+        "y": 208.8125,
+        "wires": [
+            [
+                "sd_G9akrGURzn0shKtQ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ManualCodeComponent"
+    },
+    {
+        "id": "sd_G9akrGURzn0shKtQ",
+        "type": "Script",
+        "z": "sd_ZyCxaPYUthVg121C",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.input.method = 'get';\nbh.input.url = 'product';\n\nbh.input.params = {id: page.addRegisterForm.value.id}",
+        "functionName": "sd_G9akrGURzn0shKtQ",
+        "category": "Function",
+        "x": 330,
+        "y": 208.8125,
+        "wires": [
+            [
+                "sd_pvSU418TBtXugaDB"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ManualCodeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_pvSU418TBtXugaDB",
+        "type": "Navigation",
+        "z": "sd_ZyCxaPYUthVg121C",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/details",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": {
+            "type": "bh.input",
+            "value": "params"
+        },
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_pvSU418TBtXugaDB",
+        "category": "Navigation",
+        "x": 516,
+        "y": 211,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ManualCodeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_QTvmX0mLARrMtuhv",
+        "type": "UseDependency",
+        "z": "sd_ZyCxaPYUthVg121C",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formGroup"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formControl"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "validator"
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_QTvmX0mLARrMtuhv",
+        "category": "Function",
+        "x": 365,
+        "y": 74.8125,
+        "wires": [
+            [
+                "sd_vVtTwHWS8Dz6Mey0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ManualCodeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_vVtTwHWS8Dz6Mey0",
+        "type": "Script",
+        "z": "sd_ZyCxaPYUthVg121C",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.addRegisterForm = new page.formGroup({\n    id : new page.formControl(\"\",[page.validator.required])\n})",
+        "functionName": "sd_vVtTwHWS8Dz6Mey0",
+        "category": "Function",
+        "x": 525,
+        "y": 74.8125,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ManualCodeComponent",
+        "generated": true
+    }
+]

@@ -1,0 +1,13 @@
+{
+    "displayName": "GoldBillingUI",
+    "appName": "goldbillingui",
+    "description": "UI",
+    "lastModified": "2023-04-27T09:51:42.105Z",
+    "imgSourcePath": "",
+    "version": "1.0.0",
+    "appType": "uiOnly",
+    "templateName": "blank",
+    "createDate": "2023-04-27T09:51:41.663Z",
+    "analyticsId": "5484f819-a062-7816-70fc-58368373af97",
+    "createdStudioVersion": "9.1.2"
+}

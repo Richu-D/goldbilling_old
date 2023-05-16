@@ -1,0 +1,56 @@
+[
+    {
+        "id": "sd_ouv6BP3BxkHxXYy9",
+        "type": "tab",
+        "createdDate": "2023-05-05T18:53:08.295Z",
+        "label": "OrderPlc",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "OrderPlcComponent"
+    },
+    {
+        "id": "sd_R3EXVgyA3FiXxn7q",
+        "type": "OnInit",
+        "z": "sd_ouv6BP3BxkHxXYy9",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_R3EXVgyA3FiXxn7q",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_x11jP99WWbcbcSIJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "OrderPlcComponent"
+    },
+    {
+        "id": "sd_x11jP99WWbcbcSIJ",
+        "type": "PageVariables",
+        "z": "sd_ouv6BP3BxkHxXYy9",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_x11jP99WWbcbcSIJ",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "OrderPlcComponent",
+        "generated": true
+    }
+]

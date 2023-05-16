@@ -1,0 +1,97 @@
+<div fxLayout="column wrap" style="padding:10px;" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="row wrap" style="position:absolute;" fxLayoutAlign="start stretch" [fxShow]="true"><img imgSrc="Web/Icons/avatar.jpg" class="avatar" width="135px;"></div>
+  <div fxLayout="row wrap" style="width:100%;margin-top:4px;" fxFlex="100" fxLayoutAlign="end center" [fxShow]="true">
+    <div fxLayout="row wrap" class="avatar-row" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div style="margin-left:7em;width:100%;">
+        <div>
+          <h2 style="color:blue">Hello</h2>
+          <h4 style="color:gray; line-height:1px; margin-bottom: 10px;">{{page.userName}}</h4>
+          <h4 style="color:red; line-height:1px;" (click)="logout()">Logout</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="column wrap" class="prod-sales-overview" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div>
+        <div>
+          <h4 style="color:#740808">Assignments</h4>
+        </div>
+        <h4 style="color:#740808">Product Sales Overview</h4>
+      </div>
+    </div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true">
+      <div style="width:100%; height: 200px; overflow: scroll;">
+        <div *ngFor="let product of page.productOrders">
+          <div class="prod-sales-overview-details">
+            <div style="display:flex;align-items:center;">
+
+              <button style="width:4em;height:3em;border-radius:2em;border:none; background:blue;color:white;">4.0 </button>
+              <h5 style="margin-left:1em;color:gray">{{product.name}}</h5>
+            </div>
+            <div>
+              <button style="width:4em;height:3em;border-radius:2em;border:none;background:gray;color:white">{{product.quantity}}</button>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <!-- 
+<div class="prod-sales-overview-details">
+	<div style="display:flex;align-items:center;">
+
+		<button style="width:4em;height:3em;border-radius:2em;border:none; background:blue;color:white;">5.2 </button>
+		<h5 style="margin-left:1em;color:gray">Rings & Body piercings</h5>
+	</div>
+	<div>
+		<button style="width:4em;height:3em;border-radius:2em;border:none;background:gray;color:white">4 </button>
+	</div>
+</div>
+<hr>
+<div class="prod-sales-overview-details">
+	<div style="display:flex;align-items:center;">
+
+		<button style="width:4em;height:3em;border-radius:2em;border:none; background:blue;color:white;">6.4 </button>
+		<h5 style="margin-left:1em;color:gray">Necklaces & Chokers</h5>
+	</div>
+	<div>
+		<button style="width:4em;height:3em;border-radius:2em;border:none;background:gray;color:white">1 </button>
+	</div>
+</div> -->
+      </div>
+    </div>
+  </div>
+  <div fxLayout="column wrap" class="prod-sales-overview" fxFlex="100" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"></div>
+    <div fxLayout="row wrap" fxLayoutAlign="space-between stretch" [fxShow]="true">
+      <div (click)="orderDetails()" style="width:100%;">
+        <div class="prod-sales-overview-details">
+          <div style="display:flex;align-items:center;">
+            <h5 style="margin-left:1em;color:gray">Delivered</h5>
+          </div>
+          <div>
+            <button style="width:4em;height:3em;border-radius:2em;border:none;background:gray;color:white">{{page.completed}}</button>
+          </div>
+        </div>
+        <hr>
+
+        <div class="prod-sales-overview-details">
+          <div style="display:flex;align-items:center;">
+            <h5 style="margin-left:1em;color:gray">Pendings</h5>
+          </div>
+          <div>
+            <button style="width:4em;height:3em;border-radius:2em;border:none;background:gray;color:white">{{page.pending}} </button>
+          </div>
+        </div>
+        <hr>
+        <div class="prod-sales-overview-details">
+          <div style="display:flex;align-items:center;">
+            <h5 style="margin-left:1em;color:gray">Cancelled</h5>
+          </div>
+          <div>
+            <button style="width:4em;height:3em;border-radius:2em;border:none;background:gray;color:white">{{page.cancel}} </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

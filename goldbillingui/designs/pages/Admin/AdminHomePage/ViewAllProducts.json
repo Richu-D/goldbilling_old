@@ -1,0 +1,525 @@
+[
+    {
+        "id": "sd_KSu3JT9zLAy3eHVo",
+        "type": "tab",
+        "createdDate": "2023-05-01T18:05:50.833Z",
+        "label": "ViewAllProducts",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 3,
+        "generateNext": true,
+        "serviceName": "ViewAllProductsComponent"
+    },
+    {
+        "id": "sd_XRtBZmf0zGBTmp2z",
+        "type": "OnInit",
+        "z": "sd_KSu3JT9zLAy3eHVo",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_XRtBZmf0zGBTmp2z",
+        "category": "Lifecycle Events",
+        "x": 105,
+        "y": 100,
+        "wires": [
+            [
+                "sd_bF9oXJOzuKvIWb0t"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ViewAllProductsComponent"
+    },
+    {
+        "id": "sd_bF9oXJOzuKvIWb0t",
+        "type": "PageVariables",
+        "z": "sd_KSu3JT9zLAy3eHVo",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_bF9oXJOzuKvIWb0t",
+        "category": "Function",
+        "x": 255,
+        "y": 100,
+        "wires": [
+            [
+                "sd_ez7NGPUrH03ZUT3m"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ViewAllProductsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_668YpiR1yVMrx1xl",
+        "type": "PageCallService",
+        "z": "sd_KSu3JT9zLAy3eHVo",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_KSu3JT9zLAy3eHVo",
+            "type": "tab",
+            "createdDate": "2023-05-01T18:05:50.833Z",
+            "label": "ViewAllProducts",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 3
+        },
+        "flow": {
+            "flowId": "sd_UQKh6yR35kWatJbK",
+            "flowName": "getAllProducts"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "./",
+        "startName": "getAllProducts",
+        "inputParams": [],
+        "accept_csd": false,
+        "functionName": "sd_668YpiR1yVMrx1xl",
+        "category": "General",
+        "x": 420,
+        "y": 100,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ViewAllProductsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_UQKh6yR35kWatJbK",
+        "type": "PageStart",
+        "z": "sd_KSu3JT9zLAy3eHVo",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "getAllProducts",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "getAllProducts",
+        "category": "General",
+        "x": 100,
+        "y": 240,
+        "wires": [
+            [
+                "sd_Ev2KaIOM4qV2TpqO"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ViewAllProductsComponent"
+    },
+    {
+        "id": "sd_Ev2KaIOM4qV2TpqO",
+        "type": "Script",
+        "z": "sd_KSu3JT9zLAy3eHVo",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.input.url='product/all'\nbh.input.method = 'GET'",
+        "functionName": "sd_Ev2KaIOM4qV2TpqO",
+        "category": "Function",
+        "x": 265,
+        "y": 240,
+        "wires": [
+            [
+                "sd_nNRwn5UW9JmuffLK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ViewAllProductsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_nNRwn5UW9JmuffLK",
+        "type": "PageCallService",
+        "z": "sd_KSu3JT9zLAy3eHVo",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_qp1n840XhLHxXRUW",
+            "type": "tab",
+            "createdDate": "2023-05-01T12:27:41.542Z",
+            "label": "HTTPService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_ZjZwWFbxVVMtewVh",
+            "flowName": "sd_ZjZwWFbxVVMtewVh"
+        },
+        "inputVariables": [
+            {
+                "key": "body",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            },
+            {
+                "key": "method",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "method"
+            },
+            {
+                "key": "result",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            },
+            {
+                "key": "url",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "url"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "result",
+                "valueType": "this.page",
+                "value": "allProducts",
+                "mapVarName": "result",
+                "localVar": "this.page.allProducts"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/HTTPService",
+        "startName": "sd_ZjZwWFbxVVMtewVh",
+        "inputParams": [
+            null,
+            "bh.input.method",
+            null,
+            "bh.input.url"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_nNRwn5UW9JmuffLK",
+        "category": "General",
+        "x": 425,
+        "y": 240,
+        "wires": [
+            [
+                "sd_YNBtjAT5dGDg9H32"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ViewAllProductsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_YNBtjAT5dGDg9H32",
+        "type": "Script",
+        "z": "sd_KSu3JT9zLAy3eHVo",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.dataSource = new MatTableDataSource(page.allProducts.result.product)",
+        "functionName": "sd_YNBtjAT5dGDg9H32",
+        "category": "Function",
+        "x": 600,
+        "y": 240,
+        "wires": [
+            [
+                "sd_fCUuZrXTJllwD1wP"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ViewAllProductsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_dtAzmRHR5bGuVAMA",
+        "type": "Script",
+        "z": "sd_KSu3JT9zLAy3eHVo",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.dataSource = new MatTableDataSource([\n  {\n    position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' }\n  ,\n  {\n    position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' }\n  ,\n  {\n    position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' }\n  ,\n  {\n    position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' }\n  ,\n  {\n    position: 5, name: 'Boron', weight: 10.811, symbol: 'B' }\n  ,\n  {\n    position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' }\n  ,\n  {\n    position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' }\n  ,\n  {\n    position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' }\n  ,\n  {\n    position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' }\n  ,\n  {\n    position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' }\n  ,\n]);",
+        "functionName": "sd_eJuzOUTYKNgXaqdz_1",
+        "category": "Function",
+        "x": 705,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ViewAllProductsComponent"
+    },
+    {
+        "id": "sd_fCUuZrXTJllwD1wP",
+        "type": "PageVariables",
+        "z": "sd_KSu3JT9zLAy3eHVo",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "tableData",
+                "typedIpValue": {
+                    "type": "bh.local",
+                    "value": "dataSource"
+                }
+            }
+        ],
+        "functionName": "sd_E9QbOlnVduPNV5MO_1",
+        "category": "Function",
+        "x": 805,
+        "y": 240,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ViewAllProductsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Ve2xtyJP0KTXcgBL",
+        "type": "AfterViewInit",
+        "z": "sd_KSu3JT9zLAy3eHVo",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "ngAfterViewInit",
+        "category": "Lifecycle Events",
+        "x": 85,
+        "y": 380,
+        "wires": [
+            [
+                "sd_pwH2i10KjpIsbVRQ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ViewAllProductsComponent"
+    },
+    {
+        "id": "sd_pwH2i10KjpIsbVRQ",
+        "type": "ViewPicker",
+        "z": "sd_KSu3JT9zLAy3eHVo",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "childViewVariables": [
+            {
+                "key": {
+                    "type": "literal",
+                    "value": "MatSort"
+                },
+                "defaultValue": "",
+                "isViewChildren": false
+            }
+        ],
+        "functionName": "sd_xKCCTWKzvgDN0rx7_1",
+        "category": "Function",
+        "x": 225,
+        "y": 380,
+        "wires": [
+            [
+                "sd_0XHyp5iRyIjGfVnM"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ViewAllProductsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_0XHyp5iRyIjGfVnM",
+        "type": "Script",
+        "z": "sd_KSu3JT9zLAy3eHVo",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "this.page.tableData.sort = this.MatSort;",
+        "functionName": "sd_2VNGqvcKee34lvOz_1",
+        "category": "Function",
+        "x": 365,
+        "y": 380,
+        "wires": [
+            [
+                "sd_Z8DrfsZ4VrtUywcc"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ViewAllProductsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_3hjPzJFcuJRBmWJH",
+        "type": "Script",
+        "z": "sd_KSu3JT9zLAy3eHVo",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "const filterValue = (bh.input.filterEvent.target as HTMLInputElement).value;\nthis.page.tableData.filter = filterValue.trim().toLowerCase();",
+        "functionName": "sd_iBlFYTlpoczCmWts_2",
+        "category": "Function",
+        "x": 225,
+        "y": 480,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ViewAllProductsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_5mUX01VpK74GVFQB",
+        "type": "PageStart",
+        "z": "sd_KSu3JT9zLAy3eHVo",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "onFilter_2",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "filterEvent",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "onFilter_2",
+        "category": "General",
+        "x": 80,
+        "y": 480,
+        "wires": [
+            [
+                "sd_3hjPzJFcuJRBmWJH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ViewAllProductsComponent"
+    },
+    {
+        "id": "sd_Z8DrfsZ4VrtUywcc",
+        "type": "ViewPicker",
+        "z": "sd_KSu3JT9zLAy3eHVo",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "childViewVariables": [
+            {
+                "key": {
+                    "type": "literal",
+                    "value": "MatPaginator"
+                },
+                "defaultValue": "",
+                "isViewChildren": false
+            }
+        ],
+        "functionName": "sd_xKCCTWKzvgDN0rx7_3",
+        "category": "Function",
+        "x": 545,
+        "y": 380,
+        "wires": [
+            [
+                "sd_c1BA70pqlNORmkfD"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ViewAllProductsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_c1BA70pqlNORmkfD",
+        "type": "Script",
+        "z": "sd_KSu3JT9zLAy3eHVo",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "this.page.tableData.paginator = this.MatPaginator;",
+        "functionName": "sd_2VNGqvcKee34lvOz_3",
+        "category": "Function",
+        "x": 705,
+        "y": 380,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ViewAllProductsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ez7NGPUrH03ZUT3m",
+        "type": "PageCallService",
+        "z": "sd_KSu3JT9zLAy3eHVo",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_qp1n840XhLHxXRUW",
+            "type": "tab",
+            "createdDate": "2023-05-01T12:27:41.542Z",
+            "label": "HTTPService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_H9IiyjRF8pPADjfg",
+            "flowName": "routesCheckAdmin"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/HTTPService",
+        "startName": "routesCheckAdmin",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_ez7NGPUrH03ZUT3m",
+        "category": "General",
+        "x": 345,
+        "y": 100,
+        "wires": [
+            [
+                "sd_668YpiR1yVMrx1xl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ViewAllProductsComponent",
+        "generated": true
+    }
+]

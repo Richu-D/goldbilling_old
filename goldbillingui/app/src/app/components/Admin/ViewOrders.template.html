@@ -1,0 +1,56 @@
+<div fxLayout="row wrap" style="width:100%;height:100vh;padding:2em;" fxFlex="100" fxLayoutAlign="center none" [fxShow]="true">
+  <div fxLayout="column wrap" style="margin-top:2em;" fxFlex="100" fxLayoutAlign="none none" [fxShow]="true"><mat-sidenav-container [hasBackdrop]="true" (backdropClick)="onBackdrop()"><mat-sidenav #sidenav [mode]="&apos;side&apos;" [position] [opened]="true"><button mat-button>img1</button><button mat-button>img2</button><button mat-button>img3</button></mat-sidenav></mat-sidenav-container>
+    <div>
+      <div style="text-align:center;color:gray">
+        View Orders
+      </div>
+    </div>
+    <div fxLayout="column">
+
+      <div fxLayout="row" style="width:25%;" fxLayoutAlign="end">
+        <div fxLayout="column" fxFlex="end">
+          <mat-form-field fxFlex="100">
+            <input matInput (keyup)="onFilter_3($event)" placeholder="Search">
+          </mat-form-field>
+        </div>
+      </div>
+      <table mat-table [dataSource]="page?.tableData" matSort class="table-width-fix">
+        <tr mat-header-row *matHeaderRowDef="[&apos;realtime&apos;,&apos;user.name&apos;,&apos;salesman.name&apos;,&apos;paymentmethod&apos;,&apos;status&apos;,&apos;9e970cef-d01d-c168-42bb-0b6326f52607&apos;]"></tr>
+        <tr mat-row *matRowDef="let row; columns: [&apos;realtime&apos;,&apos;user.name&apos;,&apos;salesman.name&apos;,&apos;paymentmethod&apos;,&apos;status&apos;,&apos;9e970cef-d01d-c168-42bb-0b6326f52607&apos;];"></tr>
+
+        <ng-container matColumnDef="realtime">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="table-header">Date</th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="table-column">{{table.realtime}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="user.name">
+          <th mat-header-cell *matHeaderCellDef class="table-header">Customer</th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="table-column">{{table.user.name}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="salesman.name">
+          <th mat-header-cell *matHeaderCellDef class="table-header">Sales</th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="table-column">{{table.salesman.name}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="paymentmethod">
+          <th mat-header-cell *matHeaderCellDef class="table-header">Payment</th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="table-column">{{table.paymentmethod}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef class="table-header">Status</th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="table-column">{{table.status}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="9e970cef-d01d-c168-42bb-0b6326f52607">
+          <th mat-header-cell *matHeaderCellDef class="table-header">Action</th>
+          <td mat-cell *matCellDef="let table; let i = index;" class="table-column"><button mat-button style="background:blue;color:white;width:80%">View</button></td>
+        </ng-container>
+      </table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]">
+      </mat-paginator>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,248 @@
+[
+    {
+        "id": "sd_mq4V4BAbafYyiYsl",
+        "type": "tab",
+        "createdDate": "2023-05-09T05:37:20.067Z",
+        "label": "Orders",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "OrdersComponent"
+    },
+    {
+        "id": "sd_miEQ80UoHU5AKbJK",
+        "type": "OnInit",
+        "z": "sd_mq4V4BAbafYyiYsl",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_miEQ80UoHU5AKbJK",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_Cp0J3dOILUJFdTNt"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "OrdersComponent"
+    },
+    {
+        "id": "sd_Cp0J3dOILUJFdTNt",
+        "type": "PageVariables",
+        "z": "sd_mq4V4BAbafYyiYsl",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_Cp0J3dOILUJFdTNt",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_qSRjhzf0nUkgzh7f"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "OrdersComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_qSRjhzf0nUkgzh7f",
+        "type": "Script",
+        "z": "sd_mq4V4BAbafYyiYsl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.input.method = 'get';\nbh.input.url = 'order/sales/salesman';",
+        "functionName": "sd_qSRjhzf0nUkgzh7f",
+        "category": "Function",
+        "x": 320,
+        "y": 40,
+        "wires": [
+            [
+                "sd_GJZYblqkti9k0KMS"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "OrdersComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_GJZYblqkti9k0KMS",
+        "type": "PageCallService",
+        "z": "sd_mq4V4BAbafYyiYsl",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_qp1n840XhLHxXRUW",
+            "type": "tab",
+            "createdDate": "2023-05-01T12:27:41.542Z",
+            "label": "HTTPService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_ZjZwWFbxVVMtewVh",
+            "flowName": "sd_ZjZwWFbxVVMtewVh"
+        },
+        "inputVariables": [
+            {
+                "key": "body",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            },
+            {
+                "key": "method",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "method"
+            },
+            {
+                "key": "result",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            },
+            {
+                "key": "url",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "url"
+            },
+            {
+                "key": "params",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "result",
+                "valueType": "this.page",
+                "value": "orders",
+                "mapVarName": "result",
+                "localVar": "this.page.orders"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/HTTPService",
+        "startName": "sd_ZjZwWFbxVVMtewVh",
+        "inputParams": [
+            null,
+            "bh.input.method",
+            null,
+            "bh.input.url",
+            null
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_GJZYblqkti9k0KMS",
+        "category": "General",
+        "x": 460,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "OrdersComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_hKN0shua4HHIc7D4",
+        "type": "PageStart",
+        "z": "sd_mq4V4BAbafYyiYsl",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "bill",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "id",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "bill",
+        "category": "General",
+        "x": 125,
+        "y": 180,
+        "wires": [
+            [
+                "sd_ypwcEKonvME4dUDz"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "OrdersComponent"
+    },
+    {
+        "id": "sd_bDDFyFWhgoQDUggJ",
+        "type": "Navigation",
+        "z": "sd_mq4V4BAbafYyiYsl",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/bill",
+        "qparamsMap": {
+            "type": "bh.input",
+            "value": "params"
+        },
+        "functionName": "sd_bDDFyFWhgoQDUggJ",
+        "category": "Navigation",
+        "x": 400,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "OrdersComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ypwcEKonvME4dUDz",
+        "type": "Script",
+        "z": "sd_mq4V4BAbafYyiYsl",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.input.params = {id: bh.input.id}",
+        "functionName": "sd_ypwcEKonvME4dUDz",
+        "category": "Function",
+        "x": 265,
+        "y": 180,
+        "wires": [
+            [
+                "sd_bDDFyFWhgoQDUggJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "OrdersComponent",
+        "generated": true
+    }
+]

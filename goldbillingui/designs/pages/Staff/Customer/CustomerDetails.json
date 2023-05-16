@@ -1,0 +1,336 @@
+[
+    {
+        "id": "sd_0EU6GoeMJIFWjlYj",
+        "type": "tab",
+        "createdDate": "2023-05-03T07:56:51.713Z",
+        "label": "CustomerDetails",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "CustomerDetailsComponent"
+    },
+    {
+        "id": "sd_dX7VufnNfIM9GPeP",
+        "type": "OnInit",
+        "z": "sd_0EU6GoeMJIFWjlYj",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_dX7VufnNfIM9GPeP",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_H6MIdat0honRkZSN"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "CustomerDetailsComponent"
+    },
+    {
+        "id": "sd_H6MIdat0honRkZSN",
+        "type": "PageVariables",
+        "z": "sd_0EU6GoeMJIFWjlYj",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_H6MIdat0honRkZSN",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_3ZqCct5fyLQJZ2T2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "CustomerDetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_tLNwWIqkA4PwvlHt",
+        "type": "UseDependency",
+        "z": "sd_0EU6GoeMJIFWjlYj",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formGroup"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formControl"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "validator"
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_tLNwWIqkA4PwvlHt",
+        "category": "Function",
+        "x": 465,
+        "y": 60,
+        "wires": [
+            [
+                "sd_jBx3USIkXjhRN3s2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "CustomerDetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_jBx3USIkXjhRN3s2",
+        "type": "Script",
+        "z": "sd_0EU6GoeMJIFWjlYj",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.addCustomer = new page.formGroup({\n    temp : new page.formControl(\"\", [page.validator.required]),\n    name : new page.formControl(\"\", [page.validator.required]),\n    email : new page.formControl(\"\", [page.validator.required]),\n    phone : new page.formControl(\"\",[page.validator.required]),\n    address : new page.formControl(\"\", [page.validator.required]),\n    city : new page.formControl(\"\", [page.validator.required])\n})",
+        "functionName": "sd_jBx3USIkXjhRN3s2",
+        "category": "Function",
+        "x": 625,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "CustomerDetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_rSkPr40jZJSDPXxD",
+        "type": "PageStart",
+        "z": "sd_0EU6GoeMJIFWjlYj",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "addCustomer",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "addCustomer",
+        "category": "General",
+        "x": 125,
+        "y": 180,
+        "wires": [
+            [
+                "sd_aAyoeuIAgrtNQVAI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "CustomerDetailsComponent"
+    },
+    {
+        "id": "sd_aAyoeuIAgrtNQVAI",
+        "type": "Script",
+        "z": "sd_0EU6GoeMJIFWjlYj",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.input.method = 'post';\nbh.input.url = 'user';\n\nconsole.log(page.addCustomer.value)\n\nbh.input.body = page.addCustomer.value",
+        "functionName": "sd_aAyoeuIAgrtNQVAI",
+        "category": "Function",
+        "x": 245,
+        "y": 180,
+        "wires": [
+            [
+                "sd_1DMpb6qh7QbcwIHr"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "CustomerDetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_1DMpb6qh7QbcwIHr",
+        "type": "PageCallService",
+        "z": "sd_0EU6GoeMJIFWjlYj",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_qp1n840XhLHxXRUW",
+            "type": "tab",
+            "createdDate": "2023-05-01T12:27:41.542Z",
+            "label": "HTTPService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_ZjZwWFbxVVMtewVh",
+            "flowName": "sd_ZjZwWFbxVVMtewVh"
+        },
+        "inputVariables": [
+            {
+                "key": "body",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "body"
+            },
+            {
+                "key": "method",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "method"
+            },
+            {
+                "key": "result",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            },
+            {
+                "key": "url",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "url"
+            },
+            {
+                "key": "params",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "result",
+                "valueType": "bh.input",
+                "value": "result",
+                "mapVarName": "result",
+                "localVar": "bh.input.result"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/HTTPService",
+        "startName": "sd_ZjZwWFbxVVMtewVh",
+        "inputParams": [
+            "bh.input.body",
+            "bh.input.method",
+            null,
+            "bh.input.url",
+            null
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_1DMpb6qh7QbcwIHr",
+        "category": "General",
+        "x": 385,
+        "y": 180,
+        "wires": [
+            [
+                "sd_Y5tRwWLJd2IhMdOy"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "CustomerDetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Y5tRwWLJd2IhMdOy",
+        "type": "Script",
+        "z": "sd_0EU6GoeMJIFWjlYj",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "history.back()",
+        "functionName": "sd_Y5tRwWLJd2IhMdOy",
+        "category": "Function",
+        "x": 505,
+        "y": 180,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "CustomerDetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_3ZqCct5fyLQJZ2T2",
+        "type": "PageCallService",
+        "z": "sd_0EU6GoeMJIFWjlYj",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_qp1n840XhLHxXRUW",
+            "type": "tab",
+            "createdDate": "2023-05-01T12:27:41.542Z",
+            "label": "HTTPService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_EGT9Ia09cyUunsrk",
+            "flowName": "routesCheck"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/HTTPService",
+        "startName": "routesCheck",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_3ZqCct5fyLQJZ2T2",
+        "category": "General",
+        "x": 325,
+        "y": 40,
+        "wires": [
+            [
+                "sd_tLNwWIqkA4PwvlHt"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "CustomerDetailsComponent",
+        "generated": true
+    }
+]

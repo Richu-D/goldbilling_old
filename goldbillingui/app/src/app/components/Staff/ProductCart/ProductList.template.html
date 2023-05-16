@@ -1,0 +1,26 @@
+<div fxLayout="column wrap" fxLayoutAlign="start center" [fxShow]="true" *ngFor="let product of page.products.result">
+  <div fxLayout="row wrap" class="products-list-items" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div class="product-image">
+      <img [src]="product.product.image" style="width: 100%;">
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div>
+        <h1 class="product-name">{{product.product.name}}</h1>
+        <h2 class="description">By Neutrinos</h2>
+      </div>
+    </div>
+    <div fxLayout="column wrap" style="width: 20%;" fxLayoutAlign="center center" [fxShow]="true">
+      <div fxLayout="row wrap" class="counter" fxLayoutAlign="space-between center" [fxShow]="true">
+        <div (click)="addQuantity(product.product._id,product.quantity)">
+          <h1 class="button-counter">+</h1>
+        </div>
+        <div>
+          <h1 class="counter-number">{{product.quantity}}</h1>
+        </div>
+        <div (click)="removeQuantity(product.product._id,product.quantity)">
+          <h1 class="button-counter">-</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

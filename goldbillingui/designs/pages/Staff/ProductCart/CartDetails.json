@@ -1,0 +1,384 @@
+[
+    {
+        "id": "sd_4znA3SAQ37EzNuxX",
+        "type": "tab",
+        "createdDate": "2023-04-28T10:40:48.179Z",
+        "label": "CartDetails",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "CartDetailsComponent"
+    },
+    {
+        "id": "sd_PObBTiCQmQu6Vp0c",
+        "type": "OnInit",
+        "z": "sd_4znA3SAQ37EzNuxX",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [
+            {
+                "key": "values",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                }
+            },
+            {
+                "key": "newVariable",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                }
+            }
+        ],
+        "localVariables": [],
+        "outputVariables": [
+            {
+                "key": "grandTotal",
+                "defaultValue": {
+                    "type": "any",
+                    "value": null
+                }
+            }
+        ],
+        "pageVariables": [],
+        "functionName": "sd_PObBTiCQmQu6Vp0c",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_ILwk47s13XUxHkqU"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "CartDetailsComponent"
+    },
+    {
+        "id": "sd_ILwk47s13XUxHkqU",
+        "type": "PageVariables",
+        "z": "sd_4znA3SAQ37EzNuxX",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_ILwk47s13XUxHkqU",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_5aBO2ma2aEjw4fWa"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "CartDetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_5aBO2ma2aEjw4fWa",
+        "type": "Script",
+        "z": "sd_4znA3SAQ37EzNuxX",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.input.method = 'get';\nbh.input.url = 'cartTotal';",
+        "functionName": "sd_5aBO2ma2aEjw4fWa",
+        "category": "Function",
+        "x": 344,
+        "y": 60,
+        "wires": [
+            [
+                "sd_n5o4jYIwEqLitwuD"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "CartDetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_n5o4jYIwEqLitwuD",
+        "type": "PageCallService",
+        "z": "sd_4znA3SAQ37EzNuxX",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_qp1n840XhLHxXRUW",
+            "type": "tab",
+            "createdDate": "2023-05-01T12:27:41.542Z",
+            "label": "HTTPService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_ZjZwWFbxVVMtewVh",
+            "flowName": "sd_ZjZwWFbxVVMtewVh"
+        },
+        "inputVariables": [
+            {
+                "key": "body",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "body"
+            },
+            {
+                "key": "method",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "method"
+            },
+            {
+                "key": "result",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            },
+            {
+                "key": "url",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "url"
+            },
+            {
+                "key": "params",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "params"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "result",
+                "valueType": "this.page",
+                "value": "total",
+                "mapVarName": "result",
+                "localVar": "this.page.total"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/HTTPService",
+        "startName": "sd_ZjZwWFbxVVMtewVh",
+        "inputParams": [
+            "bh.input.body",
+            "bh.input.method",
+            null,
+            "bh.input.url",
+            "bh.input.params"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_n5o4jYIwEqLitwuD",
+        "category": "General",
+        "x": 500,
+        "y": 60,
+        "wires": [
+            [
+                "sd_VgBu5rpBSKBusFdF"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "CartDetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_GFxQaH2gdytamZw2",
+        "type": "Script",
+        "z": "sd_4znA3SAQ37EzNuxX",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.input.method = 'get';\nbh.input.url = 'cartTotal';\n\nconsole.log(\"reached\")",
+        "functionName": "sd_GFxQaH2gdytamZw2",
+        "category": "Function",
+        "x": 385,
+        "y": 220,
+        "wires": [
+            [
+                "sd_HqWW30j15jJjKzhl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "CartDetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_HqWW30j15jJjKzhl",
+        "type": "PageCallService",
+        "z": "sd_4znA3SAQ37EzNuxX",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_qp1n840XhLHxXRUW",
+            "type": "tab",
+            "createdDate": "2023-05-01T12:27:41.542Z",
+            "label": "HTTPService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_ZjZwWFbxVVMtewVh",
+            "flowName": "sd_ZjZwWFbxVVMtewVh"
+        },
+        "inputVariables": [
+            {
+                "key": "body",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "body"
+            },
+            {
+                "key": "method",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "method"
+            },
+            {
+                "key": "result",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            },
+            {
+                "key": "url",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "url"
+            },
+            {
+                "key": "params",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "params"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "result",
+                "valueType": "this.page",
+                "value": "total",
+                "mapVarName": "result",
+                "localVar": "this.page.total"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/HTTPService",
+        "startName": "sd_ZjZwWFbxVVMtewVh",
+        "inputParams": [
+            "bh.input.body",
+            "bh.input.method",
+            null,
+            "bh.input.url",
+            "bh.input.params"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_HqWW30j15jJjKzhl",
+        "category": "General",
+        "x": 525,
+        "y": 220,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "CartDetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_zZbquphSz9p0ub3o",
+        "type": "Output",
+        "z": "sd_4znA3SAQ37EzNuxX",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "eventName": "bh.pageOutput.grandTotal",
+        "data": "bh.local.grandTotal",
+        "functionName": "sd_zZbquphSz9p0ub3o",
+        "category": "Function",
+        "x": 745,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__ssdTypeInputs__": {
+            "eventName": {
+                "type": "bh.pageOutput",
+                "value": "grandTotal",
+                "constant": false
+            },
+            "data": {
+                "type": "bh.local",
+                "value": "grandTotal",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "CartDetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_VgBu5rpBSKBusFdF",
+        "type": "Script",
+        "z": "sd_4znA3SAQ37EzNuxX",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.grandTotal = (((2/ 100)*page?.total?.result[0]?.total)+page?.total?.result[0]?.total)",
+        "functionName": "sd_VgBu5rpBSKBusFdF",
+        "category": "Function",
+        "x": 625,
+        "y": 60,
+        "wires": [
+            [
+                "sd_zZbquphSz9p0ub3o"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "CartDetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_EoeZ26pStv3EPNmn",
+        "type": "OnChanges",
+        "z": "sd_4znA3SAQ37EzNuxX",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "onChanges",
+        "functionName": "ngOnChanges",
+        "category": "Lifecycle Events",
+        "x": 265,
+        "y": 220,
+        "wires": [
+            [
+                "sd_GFxQaH2gdytamZw2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "CartDetailsComponent"
+    }
+]

@@ -1,0 +1,68 @@
+[
+    {
+        "id": "sd_jJfaGebkrTllY48G",
+        "type": "tab",
+        "createdDate": "2023-04-28T11:06:54.847Z",
+        "label": "ProductsList",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "tabType": "client",
+        "generateNext": true,
+        "serviceName": "ProductsList",
+        "relativeParentPath": ""
+    },
+    {
+        "id": "sd_QMy0tkobQZEx4V3T",
+        "type": "Start",
+        "z": "sd_jJfaGebkrTllY48G",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "getProducts",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "products",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": true
+            }
+        ],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "getProducts",
+        "category": "General",
+        "x": 180,
+        "y": 80,
+        "wires": [
+            [
+                "sd_ntnmrUD2VqNkTvxC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ProductsList"
+    },
+    {
+        "id": "sd_ntnmrUD2VqNkTvxC",
+        "type": "Script",
+        "z": "sd_jJfaGebkrTllY48G",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.input.products = [\n    {\n        id: 1,\n        name: \"Gold Product 1\",\n        price: 1234,\n        rating: {\n            \"one\": 123,\n            \"two\": 12,\n            \"three\": 123,\n            \"four\": 2341,\n            \"five\": 123,\n        },\n        quantity: 123,\n        description: \"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\",\n        image: \"https://www.kalyanjewellers.net/images/Jewellery/Gold/images/rebha-sankalp-gold-necklace.jpg\" \n    },\n]",
+        "functionName": "sd_ntnmrUD2VqNkTvxC",
+        "category": "Function",
+        "x": 385,
+        "y": 80,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ProductsList",
+        "generated": true
+    }
+]

@@ -1,0 +1,336 @@
+[
+    {
+        "id": "sd_VM1L0A6v1o4iz29U",
+        "type": "tab",
+        "createdDate": "2023-05-09T05:37:43.149Z",
+        "label": "Bill",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 1,
+        "generateNext": true,
+        "serviceName": "BillComponent"
+    },
+    {
+        "id": "sd_qkReXv8Cd56kHOb1",
+        "type": "OnInit",
+        "z": "sd_VM1L0A6v1o4iz29U",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "inputVariables": [],
+        "localVariables": [],
+        "outputVariables": [],
+        "pageVariables": [],
+        "functionName": "sd_qkReXv8Cd56kHOb1",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_BfNignWfHzJ2brXK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "BillComponent"
+    },
+    {
+        "id": "sd_BfNignWfHzJ2brXK",
+        "type": "PageVariables",
+        "z": "sd_VM1L0A6v1o4iz29U",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_BfNignWfHzJ2brXK",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_v3S4gXqxtrwcVRG9"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "BillComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_fsXFCK5jv4Qv1Z4h",
+        "type": "Script",
+        "z": "sd_VM1L0A6v1o4iz29U",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.input.id)\n\nbh.input.method = 'get';\nbh.input.url = 'order/'+bh.input.id.id;",
+        "functionName": "sd_fsXFCK5jv4Qv1Z4h",
+        "category": "Function",
+        "x": 305,
+        "y": 120,
+        "wires": [
+            [
+                "sd_AX4S6wWblloyfw5f"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "BillComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_qI0LPtgC8ATH0MNK",
+        "type": "NavigationListener",
+        "z": "sd_VM1L0A6v1o4iz29U",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "",
+        "tmpOp": "",
+        "tmpOpType": "",
+        "operationType": "queryParams",
+        "operation": "keys",
+        "key": "this.page",
+        "resultMapping": "bh.input.id",
+        "functionName": "sd_qI0LPtgC8ATH0MNK",
+        "category": "Navigation",
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "sd_fsXFCK5jv4Qv1Z4h"
+            ]
+        ],
+        "__ssdTypeInputs__": {
+            "key": {
+                "type": "this.page",
+                "value": "",
+                "constant": false
+            },
+            "resultMapping": {
+                "type": "bh.input",
+                "value": "id",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "BillComponent"
+    },
+    {
+        "id": "sd_AX4S6wWblloyfw5f",
+        "type": "PageCallService",
+        "z": "sd_VM1L0A6v1o4iz29U",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_qp1n840XhLHxXRUW",
+            "type": "tab",
+            "createdDate": "2023-05-01T12:27:41.542Z",
+            "label": "HTTPService",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_ZjZwWFbxVVMtewVh",
+            "flowName": "sd_ZjZwWFbxVVMtewVh"
+        },
+        "inputVariables": [
+            {
+                "key": "body",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            },
+            {
+                "key": "method",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "method"
+            },
+            {
+                "key": "result",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            },
+            {
+                "key": "url",
+                "map": true,
+                "valueType": "bh.input",
+                "value": "url"
+            },
+            {
+                "key": "params",
+                "map": true,
+                "valueType": "bh",
+                "value": ""
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "result",
+                "valueType": "this.page",
+                "value": "bill",
+                "mapVarName": "result",
+                "localVar": "this.page.bill"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/HTTPService",
+        "startName": "sd_ZjZwWFbxVVMtewVh",
+        "inputParams": [
+            null,
+            "bh.input.method",
+            null,
+            "bh.input.url",
+            null
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_AX4S6wWblloyfw5f",
+        "category": "General",
+        "x": 445,
+        "y": 120,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "BillComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_v3S4gXqxtrwcVRG9",
+        "type": "Script",
+        "z": "sd_VM1L0A6v1o4iz29U",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.dataSource = new MatTableDataSource([\n  {\n    category: \"Chain\", product: 'Simple', weight: 1.0079, price: '12000',wc: '2000',total: '14000',sgst: '1400',cgst: '1400'     }\n  ,\n  {\n    category: \"Chain\", product: 'Simple', weight: 1.0079, price: '12000',wc: '2000',total: '14000',sgst: '1400',cgst: '1400'     }\n  ,\n  {\n    category: \"Chain\", product: 'Simple', weight: 1.0079, price: '12000',wc: '2000',total: '14000',sgst: '1400',cgst: '1400'     }\n  ,\n  {\n    category: \"Chain\", product: 'Simple', weight: 1.0079, price: '12000',wc: '2000',total: '14000',sgst: '1400',cgst: '1400'     }\n  ,\n  {\n    category: \"Chain\", product: 'Simple', weight: 1.0079, price: '12000',wc: '2000',total: '14000',sgst: '1400',cgst: '1400'     }\n  \n \n]);",
+        "functionName": "sd_eJuzOUTYKNgXaqdz_1",
+        "category": "Function",
+        "x": 385,
+        "y": 40,
+        "wires": [
+            [
+                "sd_QgEDFtubW9hNCWYJ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "BillComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_QgEDFtubW9hNCWYJ",
+        "type": "PageVariables",
+        "z": "sd_VM1L0A6v1o4iz29U",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "tableData",
+                "typedIpValue": {
+                    "type": "bh.local",
+                    "value": "dataSource"
+                }
+            }
+        ],
+        "functionName": "sd_E9QbOlnVduPNV5MO_1",
+        "category": "Function",
+        "x": 525,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "BillComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_wLIV8zlxawIlv73i",
+        "type": "AfterViewInit",
+        "z": "sd_VM1L0A6v1o4iz29U",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "ngAfterViewInit",
+        "category": "Lifecycle Events",
+        "x": 65,
+        "y": 340,
+        "wires": [
+            [
+                "sd_Y59Ck18G19Qj0wQm"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "BillComponent"
+    },
+    {
+        "id": "sd_Y59Ck18G19Qj0wQm",
+        "type": "ViewPicker",
+        "z": "sd_VM1L0A6v1o4iz29U",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "childViewVariables": [
+            {
+                "key": {
+                    "type": "literal",
+                    "value": "MatSort"
+                },
+                "defaultValue": "",
+                "isViewChildren": false
+            }
+        ],
+        "functionName": "sd_xKCCTWKzvgDN0rx7_1",
+        "category": "Function",
+        "x": 205,
+        "y": 340,
+        "wires": [
+            [
+                "sd_PRL6XQAhjN00VnbZ"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "BillComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_PRL6XQAhjN00VnbZ",
+        "type": "Script",
+        "z": "sd_VM1L0A6v1o4iz29U",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "this.page.tableData.sort = this.MatSort;",
+        "functionName": "sd_2VNGqvcKee34lvOz_1",
+        "category": "Function",
+        "x": 345,
+        "y": 340,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "BillComponent",
+        "generated": true
+    }
+]

@@ -1,0 +1,437 @@
+/*Importing default angular material css theme. */
+
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "nDefaults.scss";
+
+body {
+    font-family: 'system-ui';
+}
+
+.fa-solid, .fas {
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.navbar {
+    background-color: #740808;
+    position: relative;
+    color: white;
+    height: 10%;
+    width: 100%;
+    top: 90%;
+}
+
+
+.scanbar {
+    height: 100vh; 
+    background-color: gray;
+}
+
+.icon-div {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+}
+
+.cart {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+}
+
+.cart-details {
+    width: 100%;
+    height: 18%;
+}
+
+.cart-details-inner-div {
+    width: 100%;
+    padding-bottom: 6%;
+    padding-right: 6%;
+    padding-left: 6%;
+}
+
+.cart-details-text {
+    color: #828282;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.cart-details-text-total{
+    color: #9F1818;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.platform-charges-sm {
+    font-size: 14px;
+}
+
+.list-items {
+    width: 100%;
+    height: 60%;
+    overflow-y: scroll;
+}
+
+.payment-button {
+    background-color:#000AFF;
+    width: 40%;
+    color: white;
+    height: 8%;
+}
+
+.product-image {
+    width: 35%;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 35%;
+    background-color: #D9D9D9;
+}
+
+.products-list-items {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #F1F1F1;
+    width: 90%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.product-name {
+    color: #000AFF;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.description {
+    color: #828282;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.counter {
+    background-color: #D9D9D9;
+    width: 65px;
+    height: 25px;
+    border-radius: 10px;
+}
+
+.button-counter {
+    color: #740808;
+    font-size: 14px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.counter-number {
+    font-size: 14px;
+    color: #828282;
+    margin: 0;
+}
+
+.details {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    padding: 20px;
+}
+
+.details-card {
+    background: #F1F1F1;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+}
+
+.close-button-details {
+    position: absolute;
+    z-index: 10;
+    color: #9F1818;
+    font-size: 24px;
+    font-weight: 800;
+    right: 25px;
+    top: 22px;
+    cursor: pointer;
+}
+
+.card-heading {
+    color: #9F1818; 
+    text-align: center;
+    font-size: 22px; 
+    font-weight: 600;
+}
+
+.card-image {
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    height: 178px;
+}
+
+.card-product-name {
+    color: #000AFF;
+    font-size: 8px;
+}
+
+.card-description {
+    color: #828282;
+}
+
+.star {
+    font-size: 24px;
+}
+
+.add-to-cart-button {
+    background-color:#000AFF;
+    width: 160px;
+    color: white;
+    height: 36px;
+}
+
+.profile {
+    position: absolute;
+    width: 100vh;
+    height: 100vh;
+}
+
+.profile-card {
+    text-align: center;
+    width: 80%;
+    height: 90%;
+}
+
+.headerCls{
+    color: white;
+    font-size: large;
+    background-color: green;
+    // paddind: 5em;
+   
+}
+.columnStyle{
+     width: 8em;
+     background-color: black;
+     color:white;
+}
+
+.login {
+    border: 1px solid;
+    width: 40vh;
+    height: 60vh;
+    border-radius: 10px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+}
+
+.login-button {
+    color: #000AFF;
+    border: 1px solid;
+    border-radius: 10px;  
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    top: 10px;
+}
+
+.scan-id-button {
+    color: #000AFF;
+    border: 1px solid;
+    border-radius: 10px;  
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    top: 10px;
+    height: 40px;
+    width: 80px;
+}
+
+.customer-details {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+}
+
+.customer-heading {
+    color: #9F1818;
+    font-size: 16px; 
+    font-weight: 600;
+}
+
+.customer-button {
+    color: #000AFF;
+    border: 1px solid;
+    border-radius: 10px;  
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    top: 10px;
+    height: 40px;
+    width: 80px;
+}
+
+.ngx-scanner-qrcode {
+    display: block;
+    position: relative;
+    height: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.origin-video {
+    height: 100%;
+}
+
+.customer-details-enter {
+    background: #F1F1F1;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    width: 350px;
+    height: 600px;
+    padding: 10px;
+}
+
+.customer-details-text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.orders-heading {
+    color: #9F1818; 
+    text-align: center;
+    font-size: 26px; 
+    font-weight: 700;
+}
+
+//......................shb......................................
+.table-header{
+    background-color:#740808;
+    color: white;
+    font-size: large;
+   
+}
+.table-column{
+    width: 15%;
+    background-color: rgb(250, 248, 220);
+    text-align: start;
+}
+.table-columnDesc{
+    width: 25%;
+    background-color: rgb(250, 248, 220);
+    letter-spacing: 1px;
+    // line-height: 1.3;
+    text-indent: 50px;
+}
+.qr-scanner {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+}
+.scanner-btn{
+    background-color: #740808;
+    border:none;
+    border-radius: 5em;
+    color:white;
+    height:4em;
+    width:4em;
+    
+}
+//.................................shb.............................
+
+.txt{
+    color:white;
+    padding-left: 10px;
+}
+.txt::placeholder{
+    color: gray;
+    padding-left: 10px;
+}
+.txt-userid{
+    border:none;
+    width:100%;
+    height:3em;
+    border-radius:10px;
+    margin-bottom:20px;
+    background-color:#D9D9D9;
+}
+.txt-password{
+    border:1px solid #D9D9D9;
+    width:100%;
+    height:3em;
+    border-radius:10px;
+    margin-bottom:15px;
+    background:none;
+}
+.forgot-credentials{
+    background:none;font-weight: 400; font-size: 11px;color:white;
+}
+// input::-webkit-input-placeholder{
+//     color:white;
+// }
+
+.login-page{
+    // background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    background-image: url("assets/Web/Icons/bangles.jpg");
+}
+.avatar{
+    border-radius:20em;
+    height:135px;
+    border:3px solid blue;
+}
+.avatar-row{
+    width:90%;
+    height:8em;
+    background:#F1F1F1;
+    border-radius:0em 2em 2em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.prod-sales-overview{
+    background:#F1F1F1;
+    padding:1em;
+    margin-top:10px;
+    border-radius:2em;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+}
+.prod-sales-overview-details{
+    display: flex;
+    width: 100%;
+    height:50px;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.admin-addproducts{
+    border:0px solid gray;
+    padding:5px;
+    border-radius:10px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.25);
+}
+.admin-login-main{
+    // background-color: red;
+    object-fit: fill;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://plus.unsplash.com/premium_photo-1670963024940-6439eac892a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1416&q=80");
+    width: 100%;
+    height: 100vh;
+
+}
+.admin-login-form{
+    border-radius:10px;
+    border:1px solid gray;
+    width:60%;
+    padding:5px;
+     
+}
+.bill-table-header{
+    // background-color:#740808;
+    color: black;
+    font-weight: 900;
+    border:1px solid rgb(233, 226, 226);
+
+}
+.bill-table-column{
+    // width: 20%;
+    // background-color: rgb(250, 248, 220);
+    border:1px solid rgb(233, 226, 226);
+    text-align: start;
+}
+//.................................shb.............................
