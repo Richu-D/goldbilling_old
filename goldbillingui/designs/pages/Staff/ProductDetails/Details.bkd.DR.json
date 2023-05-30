@@ -425,7 +425,7 @@
                     },
                     {
                         "_key": "[src]",
-                        "_value": "page.products.product.image",
+                        "_value": "page.product.image",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -683,7 +683,7 @@
                             },
                             {
                                 "_key": "html",
-                                "_value": "<h1>{{page.products.product.name}}</h1>",
+                                "_value": "<h1>{{page.product.name}}</h1>",
                                 "_type": "a",
                                 "_attrDef": "p"
                             }
@@ -899,7 +899,7 @@
                             },
                             {
                                 "_key": "html",
-                                "_value": "<p>{{page.products.product.description}}</p>",
+                                "_value": "<p>{{page.product.description}}</p>",
                                 "_type": "a",
                                 "_attrDef": "p"
                             }

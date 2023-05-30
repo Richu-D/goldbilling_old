@@ -32,7 +32,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "BillComponent"
+        "serviceName": "BillComponent",
+        "generated": false
     },
     {
         "id": "sd_BfNignWfHzJ2brXK",
@@ -117,7 +118,8 @@
         },
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "BillComponent"
+        "serviceName": "BillComponent",
+        "generated": false
     },
     {
         "id": "sd_AX4S6wWblloyfw5f",
@@ -204,9 +206,9 @@
             []
         ],
         "__n_excludedFromValidation__": {},
+        "generated": true,
         "generateNext": false,
-        "serviceName": "BillComponent",
-        "generated": true
+        "serviceName": "BillComponent"
     },
     {
         "id": "sd_v3S4gXqxtrwcVRG9",
@@ -279,7 +281,8 @@
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
-        "serviceName": "BillComponent"
+        "serviceName": "BillComponent",
+        "generated": false
     },
     {
         "id": "sd_Y59Ck18G19Qj0wQm",

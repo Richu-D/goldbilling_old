@@ -74,28 +74,6 @@ export class HTTPService {
     }
   }
 
-  async routesCheck(...others) {
-    try {
-      var bh: any = {
-        input: {},
-        local: {},
-      };
-      bh = this.sdService.__constructDefault(bh);
-
-      bh = await this.sd_A31BVKwx1DoLED06(bh);
-      //appendnew_next_routesCheck
-      return (
-        // formatting output variables
-        {
-          input: {},
-          local: {},
-        }
-      );
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_EGT9Ia09cyUunsrk');
-    }
-  }
-
   async routesCheckAdmin(...others) {
     try {
       var bh: any = {
@@ -149,99 +127,6 @@ export class HTTPService {
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_cPatTDhO6CHmYUvc');
-    }
-  }
-
-  async sd_2YyzLvqNAwZCeSca(bh) {
-    try {
-      if (
-        this.sdService.operators['se'](
-          bh.error.error.message,
-          'Session not present',
-          undefined,
-          undefined
-        )
-      ) {
-        bh = await this.sd_rvNI4WmvPzBrpwp6(bh);
-      } else if (
-        this.sdService.operators['eq'](
-          bh.error.error.message,
-          'AdminLogin',
-          undefined,
-          undefined
-        )
-      ) {
-        bh = await this.sd_Mx7fp620XUMVcfB4(bh);
-      }
-
-      return bh;
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_2YyzLvqNAwZCeSca');
-    }
-  }
-
-  async sd_rvNI4WmvPzBrpwp6(bh) {
-    try {
-      const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/login');
-      await this.router.navigate(
-        [this.sdService.formatPathWithParams(path, undefined)],
-        {
-          queryParams: Object.assign(qprm, ''),
-        }
-      );
-
-      //appendnew_next_sd_rvNI4WmvPzBrpwp6
-      return bh;
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_rvNI4WmvPzBrpwp6');
-    }
-  }
-
-  async sd_Mx7fp620XUMVcfB4(bh) {
-    try {
-      const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/admin-log');
-      await this.router.navigate([
-        this.sdService.formatPathWithParams(path, undefined),
-      ]);
-
-      //appendnew_next_sd_Mx7fp620XUMVcfB4
-      return bh;
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_Mx7fp620XUMVcfB4');
-    }
-  }
-
-  async sd_A31BVKwx1DoLED06(bh) {
-    try {
-      bh.input.url = bh.system.environment.properties.ssdURL + 'check';
-
-      bh = await this.sd_h6dijSV94vuimpIv(bh);
-      //appendnew_next_sd_A31BVKwx1DoLED06
-      return bh;
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_A31BVKwx1DoLED06');
-    }
-  }
-
-  async sd_h6dijSV94vuimpIv(bh) {
-    try {
-      let requestOptions = {
-        url: bh.input.url,
-        method: 'get',
-        responseType: 'json',
-        headers: {},
-        params: {},
-        body: undefined,
-        withCredentials: true,
-      };
-      bh.input.check = await this.sdService.nHttpRequest(requestOptions);
-
-      //appendnew_next_sd_h6dijSV94vuimpIv
-      return bh;
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_h6dijSV94vuimpIv');
     }
   }
 
@@ -323,23 +208,13 @@ export class HTTPService {
     bh.errorSource = src;
 
     if (
-      false ||
-      (await this.sd_RmwQsThaffmlh2U7(bh))
+      false
       /*appendnew_next_Catch*/
     ) {
       return bh;
     } else {
       throw e;
     }
-  }
-  async sd_RmwQsThaffmlh2U7(bh) {
-    const nodes = ['sd_cPatTDhO6CHmYUvc', 'sd_h6dijSV94vuimpIv'];
-    if (nodes.includes(bh.errorSource)) {
-      bh = await this.sd_2YyzLvqNAwZCeSca(bh);
-      //appendnew_next_sd_RmwQsThaffmlh2U7
-      return true;
-    }
-    return false;
   }
   //appendnew_flow_HTTPService_Catch
 }

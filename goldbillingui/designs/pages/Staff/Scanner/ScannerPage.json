@@ -6,12 +6,12 @@
         "label": "ScannerPage",
         "disabled": false,
         "info": "",
-        "functionSeq": 0,
+        "functionSeq": 2,
         "generateNext": true,
         "serviceName": "ScannerPageComponent"
     },
     {
-        "id": "sd_10YjKy3zAquVpFcP",
+        "id": "sd_L3L0hhvCRf5dKgNZ",
         "type": "OnInit",
         "z": "sd_277MOqrVDiPJ9VN4",
         "viewType": "common",
@@ -21,13 +21,13 @@
         "localVariables": [],
         "outputVariables": [],
         "pageVariables": [],
-        "functionName": "sd_10YjKy3zAquVpFcP",
+        "functionName": "sd_10YjKy3zAquVpFcP_1_2",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 45,
+        "y": 160,
         "wires": [
             [
-                "sd_bYosjTCqnx97WsTD"
+                "sd_yFifZVnrL73o30wC"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -35,7 +35,7 @@
         "serviceName": "ScannerPageComponent"
     },
     {
-        "id": "sd_bYosjTCqnx97WsTD",
+        "id": "sd_yFifZVnrL73o30wC",
         "type": "PageVariables",
         "z": "sd_277MOqrVDiPJ9VN4",
         "viewType": "pages",
@@ -53,13 +53,13 @@
                 }
             }
         ],
-        "functionName": "sd_bYosjTCqnx97WsTD",
+        "functionName": "sd_bYosjTCqnx97WsTD_1_2",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 145,
+        "y": 160,
         "wires": [
             [
-                "sd_EQHyy7vBbF3TLBmT"
+                "sd_FQbN0PIGSElsgvFS"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -68,115 +68,23 @@
         "generated": true
     },
     {
-        "id": "sd_3a9F9iMRqA2Wh6NQ",
-        "type": "PageCallService",
-        "z": "sd_277MOqrVDiPJ9VN4",
-        "viewType": "pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 1,
-        "isValidNode": true,
-        "noerr": 0,
-        "service": {
-            "id": "sd_qp1n840XhLHxXRUW",
-            "type": "tab",
-            "createdDate": "2023-05-01T12:27:41.542Z",
-            "label": "HTTPService",
-            "disabled": false,
-            "info": "",
-            "functionSeq": 0,
-            "tabType": "client"
-        },
-        "flow": {
-            "flowId": "sd_EGT9Ia09cyUunsrk",
-            "flowName": "routesCheck"
-        },
-        "inputVariables": [],
-        "outputMapping": [],
-        "serviceImportPath": "app/sd-services/HTTPService",
-        "startName": "routesCheck",
-        "inputParams": [],
-        "accept_bh": false,
-        "accept_csd": true,
-        "functionName": "sd_3a9F9iMRqA2Wh6NQ",
-        "category": "General",
-        "x": 445,
-        "y": 80,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "ScannerPageComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_ulnYTmErrxkIFEu1",
-        "type": "Navigation",
-        "z": "sd_277MOqrVDiPJ9VN4",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "path": "/home/scanner/enter-id",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
-        "functionName": "sd_ulnYTmErrxkIFEu1",
-        "category": "Navigation",
-        "x": 340,
-        "y": 340,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "ScannerPageComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_EQHyy7vBbF3TLBmT",
-        "type": "Script",
-        "z": "sd_277MOqrVDiPJ9VN4",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "// let data = this.inputData\n\n// console.log(data)",
-        "functionName": "sd_EQHyy7vBbF3TLBmT",
-        "category": "Function",
-        "x": 325,
-        "y": 80,
-        "wires": [
-            [
-                "sd_3a9F9iMRqA2Wh6NQ"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "ScannerPageComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_2X6qpiE9ClSFjJya",
+        "id": "sd_7Mh03wJG1PuLlOn3",
         "type": "PageStart",
         "z": "sd_277MOqrVDiPJ9VN4",
         "viewType": "pages",
         "nodeType": "start",
-        "name": "Enter the code manually",
+        "name": "toggleManualCodeInput_2",
         "outputs": 1,
         "inputVariables": [],
         "localVariables": [],
         "flow_type": "sync",
-        "functionName": "enterTheCodeManually",
+        "functionName": "toggleManualCodeInput_2",
         "category": "General",
-        "x": 165,
-        "y": 340,
+        "x": 45,
+        "y": 260,
         "wires": [
             [
-                "sd_ulnYTmErrxkIFEu1"
+                "sd_NE5w7mCbt5kiQyqW"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -184,16 +92,64 @@
         "serviceName": "ScannerPageComponent"
     },
     {
-        "id": "sd_C2pQDmAcGJGE136l",
+        "id": "sd_NE5w7mCbt5kiQyqW",
+        "type": "Script",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.showManualQRCodeInput = !page.showManualQRCodeInput;",
+        "functionName": "sd_AgpFFAvlnvI5OGvb_1_2",
+        "category": "Function",
+        "x": 160,
+        "y": 260,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ScannerPageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Akmf4Nj17D0BzRR6",
+        "type": "OnDestroy",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_wf98MsOb4CxMBTWi_1_2",
+        "category": "Lifecycle Events",
+        "x": 45,
+        "y": 480,
+        "wires": [
+            [
+                "sd_Z0UjwPHsNMMeujj9"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ScannerPageComponent"
+    },
+    {
+        "id": "sd_f7bBd4YWhqVWq6Cn",
         "type": "PageStart",
         "z": "sd_277MOqrVDiPJ9VN4",
         "viewType": "pages",
         "nodeType": "start",
-        "name": "scannedData",
+        "name": "toggleCamera_2",
         "outputs": 1,
         "inputVariables": [
             {
-                "key": "scannedId",
+                "key": "action",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            },
+            {
+                "key": "event",
                 "defaultValue": {
                     "type": "any",
                     "value": ""
@@ -203,13 +159,13 @@
         ],
         "localVariables": [],
         "flow_type": "sync",
-        "functionName": "scannedData",
+        "functionName": "toggleCamera_2",
         "category": "General",
-        "x": 165,
-        "y": 220,
+        "x": 45,
+        "y": 360,
         "wires": [
             [
-                "sd_EqNPAE215DeMRkgo"
+                "sd_vTRDpRDd60S8QBbn"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -217,20 +173,51 @@
         "serviceName": "ScannerPageComponent"
     },
     {
-        "id": "sd_EqNPAE215DeMRkgo",
+        "id": "sd_NzE2CqQf7mqdZbii",
         "type": "Script",
         "z": "sd_277MOqrVDiPJ9VN4",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(bh.input.scannedId)\n\nconsole.log(page)\n\nbh.input.params = {id: bh.input.scannedId}",
-        "functionName": "sd_EqNPAE215DeMRkgo",
+        "script": "\nif(page?.action?.isStart){\n    page?.action?.stop()\n}else{\n    page?.action?.start()\n}",
+        "functionName": "sd_4MdZgOD3x2xIBzIW_1_2",
         "category": "Function",
-        "x": 405,
-        "y": 220,
+        "x": 345,
+        "y": 360,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ScannerPageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_pT5Juurx805alDPR",
+        "type": "PageVariables",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "action",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "input?.action"
+                }
+            }
+        ],
+        "functionName": "sd_SIArGH50MxMZMhTp_1_2",
+        "category": "Function",
+        "x": 245,
+        "y": 400,
         "wires": [
             [
-                "sd_x0RGw1z94tFJrJ6N"
+                "sd_NzE2CqQf7mqdZbii"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -239,23 +226,491 @@
         "generated": true
     },
     {
-        "id": "sd_x0RGw1z94tFJrJ6N",
+        "id": "sd_vTRDpRDd60S8QBbn",
+        "type": "PageSwitch",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "action",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.action",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "eq",
+                "v": "undefined",
+                "vt": "literal",
+                "gv": "undefined"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_TvDHYVlmPOLcYB44_1_2",
+        "category": "Function",
+        "x": 145,
+        "y": 360,
+        "wires": [
+            [
+                "sd_NzE2CqQf7mqdZbii"
+            ],
+            [
+                "sd_pT5Juurx805alDPR"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ScannerPageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_tC8PaCwp7wLqyKEU",
+        "type": "PageStart",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "getScannedProduct_2",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "getScannedProduct_2",
+        "category": "General",
+        "x": 65,
+        "y": 580,
+        "wires": [
+            [
+                "sd_SQXQyvRfpYpa4Lyv"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ScannerPageComponent"
+    },
+    {
+        "id": "sd_SQXQyvRfpYpa4Lyv",
+        "type": "Script",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.productId = page.addRegisterForm.value.id\n\nconsole.log(bh.local.productId,\"bh.local.productId\")",
+        "functionName": "sd_Js0mj4LsFroQNDc2_1_2",
+        "category": "Function",
+        "x": 205,
+        "y": 580,
+        "wires": [
+            [
+                "sd_0owVfOFZ64EYcsvs"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ScannerPageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_FQbN0PIGSElsgvFS",
+        "type": "UseDependency",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formGroup"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "formControl"
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "Validators",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": "validator"
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_GsiqEecRCk9Nv0Aw_1_2",
+        "category": "Function",
+        "x": 245,
+        "y": 160,
+        "wires": [
+            [
+                "sd_ytjsGMbAhT49i89l"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ScannerPageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_ytjsGMbAhT49i89l",
+        "type": "Script",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.addRegisterForm = new page.formGroup({\n    id : new page.formControl(\"\",[page.validator.required])\n})",
+        "functionName": "sd_m6ldH1rtMeNOlIiH_1_2",
+        "category": "Function",
+        "x": 345,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ScannerPageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_euHZcLMJ7ZEZ32G2",
+        "type": "PageStart",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "qrResult_2",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "qrResult_2",
+        "category": "General",
+        "x": 225,
+        "y": 480,
+        "wires": [
+            [
+                "sd_0owVfOFZ64EYcsvs"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ScannerPageComponent"
+    },
+    {
+        "id": "sd_UerXobRedI1SvdHu",
+        "type": "Script",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.productId = bh?.local?.productId || null;\n\nif(bh?.input?.event && bh?.input?.event[0]?.value){\nconsole.log(`QR value is ${bh?.input?.event[0]?.value}`)\nbh.local.productId = bh?.input?.event[0]?.value;\npage.action.stop()\n}\n\nbh.local.method = \"get\"\nbh.local.url = `${bh.local.ssdURL}product?id=${bh.local.productId}`\n",
+        "functionName": "sd_JcDdfgLIUOiAjjBh_1_2",
+        "category": "Function",
+        "x": 425,
+        "y": 480,
+        "wires": [
+            [
+                "sd_nTQobrnNkf1MMT67"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ScannerPageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Z0UjwPHsNMMeujj9",
+        "type": "Script",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page?.action?.stop()",
+        "functionName": "sd_MlGHKwbWk02tGe7F_2",
+        "category": "Function",
+        "x": 140,
+        "y": 480,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ScannerPageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_0owVfOFZ64EYcsvs",
+        "type": "Environment",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "bh.local",
+                    "value": "ssdURL"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_0owVfOFZ64EYcsvs",
+        "category": "General",
+        "x": 325,
+        "y": 480,
+        "wires": [
+            [
+                "sd_UerXobRedI1SvdHu"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ScannerPageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_nTQobrnNkf1MMT67",
+        "type": "PageSwitch",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "productId",
+        "propertyType": "bh.local",
+        "propertyGv": "bh.local.productId",
+        "rules": [
+            {
+                "t": "nnull"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "functionName": "sd_nTQobrnNkf1MMT67",
+        "category": "Function",
+        "x": 520,
+        "y": 480,
+        "wires": [
+            [
+                "sd_x4jmM62ytYpyxQoX"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ScannerPageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_x4jmM62ytYpyxQoX",
+        "type": "HttpRequest",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "methodMapping": "bh.local.method",
+        "methodMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "method"
+        },
+        "urlMapping": "bh.local.url",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_x4jmM62ytYpyxQoX",
+        "category": "HTTP",
+        "x": 625,
+        "y": 480,
+        "wires": [
+            [
+                "sd_T4De5Tu9hqRpK9L4"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ScannerPageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_T4De5Tu9hqRpK9L4",
+        "type": "Storage",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "tempProduct"
+        },
+        "value": {
+            "type": "bh.local",
+            "value": "result.product"
+        },
+        "resultMapping": {},
+        "functionName": "sd_T4De5Tu9hqRpK9L4",
+        "category": "Storage",
+        "x": 720,
+        "y": 480,
+        "wires": [
+            [
+                "sd_IHRLj1LHh3yY7Da0"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ScannerPageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_FqaJtfPcrfPJjkpT",
+        "type": "Catch",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "selectedNodes": [
+            "sd_x4jmM62ytYpyxQoX"
+        ],
+        "selectCatchType": "selectednodes",
+        "masternodeList": "",
+        "ignoreList": "",
+        "functionName": "sd_FqaJtfPcrfPJjkpT",
+        "category": "General",
+        "x": 625,
+        "y": 580,
+        "wires": [
+            [
+                "sd_x2d4s15FtV9OMNUr"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ScannerPageComponent"
+    },
+    {
+        "id": "sd_G6tVAIiU7AJXsBnw",
+        "type": "SnackBar",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Product not found"
+        },
+        "action": {
+            "type": "str",
+            "value": ""
+        },
+        "duration": {
+            "type": "num",
+            "value": ""
+        },
+        "horizontalPosition": "center",
+        "verticalPosition": "bottom",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_G6tVAIiU7AJXsBnw",
+        "category": "General",
+        "x": 845,
+        "y": 580,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ScannerPageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_IHRLj1LHh3yY7Da0",
         "type": "Navigation",
         "z": "sd_277MOqrVDiPJ9VN4",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
         "path": "/home/details",
-        "qparamsMap": {
-            "type": "bh.input",
-            "value": "params"
-        },
-        "functionName": "sd_x0RGw1z94tFJrJ6N",
+        "functionName": "sd_IHRLj1LHh3yY7Da0",
         "category": "Navigation",
-        "x": 580,
-        "y": 220,
+        "x": 820,
+        "y": 480,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ScannerPageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_x2d4s15FtV9OMNUr",
+        "type": "Script",
+        "z": "sd_277MOqrVDiPJ9VN4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.action.start()",
+        "functionName": "sd_x2d4s15FtV9OMNUr",
+        "category": "Function",
+        "x": 725,
+        "y": 580,
+        "wires": [
+            [
+                "sd_G6tVAIiU7AJXsBnw"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

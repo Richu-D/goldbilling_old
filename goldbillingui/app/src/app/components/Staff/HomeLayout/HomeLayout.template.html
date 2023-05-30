@@ -1,3 +1,9 @@
-<div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-  <div fxLayout="column wrap" style="height: 100vh;" fxFlex="100" fxLayoutAlign="none none" [fxShow]="true"><router-outlet></router-outlet><bh-Navbar style="position:absolute;" class="navbar"></bh-Navbar></div>
+<div fxLayout="column wrap" style="height: 100vh;" fxFlex="100" fxLayoutAlign="none none" [fxShow]="true"><router-outlet></router-outlet>
+  <nav style="background-color:#740808;position:absolute;bottom:0;color:white;height:10%;width: 100%;" fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-around center" [fxShow]="true">
+    <div fxLayout="column" fxLayoutAlign="center center" *ngFor="let item of page.navbar" routerLink="{{item.url}}" routerLinkActive="active" style="cursor: pointer;">
+      <i class="{{item.icon}}">
+      </i>
+      <p style="font-weight:400;font-size:14px;margin:0;">{{item.name}}</p>
+    </div>
+  </nav>
 </div>

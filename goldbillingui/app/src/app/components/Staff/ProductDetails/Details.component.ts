@@ -8,17 +8,11 @@ import {
   Input,
   Output,
   EventEmitter,
-  AfterViewInit,
-  ViewChild,
-  ViewChildren,
-  SimpleChanges,
-  OnChanges,
 } from '@angular/core'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.service'; //_splitter_
-import { HTTPService } from 'app/sd-services/HTTPService'; //_splitter_
-import { ActivatedRoute, Router } from '@angular/router'; //_splitter_
+import { Router } from '@angular/router'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -54,15 +48,6 @@ export class DetailsComponent {
       .get(SDPageCommonService)
       .constructFlowObject(this);
 
-    const routesd_EdN3oyxbMOubWOEQInstance =
-      this.__page_injector__.get(ActivatedRoute);
-    this.page._route_sd_EdN3oyxbMOubWOEQ =
-      routesd_EdN3oyxbMOubWOEQInstance.queryParams.subscribe((event: any) => {
-        let bh = this.sdService.__constructDefault({});
-        bh.input.params = event;
-        this.sd_EdN3oyxbMOubWOEQ(bh);
-      });
-
     //append_listeners
   }
 
@@ -76,16 +61,6 @@ export class DetailsComponent {
     }
   }
 
-  sd_EdN3oyxbMOubWOEQ(bh) {
-    try {
-      bh = this.sd_eK1HmAoAyigBg4r0(bh);
-      //appendnew_next_sd_EdN3oyxbMOubWOEQ
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_EdN3oyxbMOubWOEQ');
-    }
-  }
-
   navigateToCart(...others) {
     try {
       var bh: any = this.__page_injector__
@@ -94,7 +69,7 @@ export class DetailsComponent {
       bh.input = {};
       bh.local = {};
 
-      bh = this.sd_PMyrV3oFYTNsP8dx(bh);
+      bh = this.sd_AsOyZBggnoZcRyca(bh);
       //appendnew_next_navigateToCart
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_zHJ1ybUSfbfvUmr8');
@@ -109,7 +84,7 @@ export class DetailsComponent {
       bh.input = {};
       bh.local = {};
 
-      bh = this.sd_gI7TnElBtjUhzmz1(bh);
+      bh = this.sd_M53uKBvgvycvgMEo(bh);
       //appendnew_next_navigateToScan
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_HkC2vCC0RoXgSMLX');
@@ -120,7 +95,7 @@ export class DetailsComponent {
 
   sd_C5qDvc31cazOGMeg(bh) {
     try {
-      bh = this.sd_SOAk98gKhZHk8ZzQ(bh);
+      bh = this.sd_OjjDr811nmDw8T2H(bh);
       //appendnew_next_sd_C5qDvc31cazOGMeg
       return bh;
     } catch (e) {
@@ -128,122 +103,30 @@ export class DetailsComponent {
     }
   }
 
-  async sd_SOAk98gKhZHk8ZzQ(bh) {
+  sd_OjjDr811nmDw8T2H(bh) {
     try {
-      const HTTPServiceInstance: HTTPService =
-        this.__page_injector__.get(HTTPService);
+      this.page.product = JSON.parse(localStorage.getItem('tempProduct'));
 
-      let outputVariables = await HTTPServiceInstance.routesCheck();
-
-      //appendnew_next_sd_SOAk98gKhZHk8ZzQ
+      bh = this.sd_hP2lgWesuM87hk1S(bh);
+      //appendnew_next_sd_OjjDr811nmDw8T2H
       return bh;
     } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_SOAk98gKhZHk8ZzQ');
+      return this.errorHandler(bh, e, 'sd_OjjDr811nmDw8T2H');
     }
   }
 
-  sd_eK1HmAoAyigBg4r0(bh) {
-    try {
-      const page = this.page;
-      bh.input.method = 'get';
-      bh.input.url = 'product';
-
-      page.id = bh.input.params;
-
-      bh = this.sd_8JIhdZPUfZoHXf7l(bh);
-      //appendnew_next_sd_eK1HmAoAyigBg4r0
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_eK1HmAoAyigBg4r0');
-    }
-  }
-
-  async sd_8JIhdZPUfZoHXf7l(bh) {
-    try {
-      const HTTPServiceInstance: HTTPService =
-        this.__page_injector__.get(HTTPService);
-
-      let outputVariables = await HTTPServiceInstance.sd_ZjZwWFbxVVMtewVh(
-        bh.input.body,
-        bh.input.method,
-        undefined,
-        bh.input.url,
-        bh.input.params
-      );
-      this.page.products = outputVariables.input.result;
-
-      //appendnew_next_sd_8JIhdZPUfZoHXf7l
-      return bh;
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_8JIhdZPUfZoHXf7l');
-    }
-  }
-
-  sd_PMyrV3oFYTNsP8dx(bh) {
-    try {
-      const page = this.page;
-      bh.input.method = 'post';
-      bh.input.url = 'cart';
-
-      bh.input.body = {
-        proid: page.id.id,
-      };
-
-      bh = this.sd_egWSstGkw8HHAR01(bh);
-      //appendnew_next_sd_PMyrV3oFYTNsP8dx
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_PMyrV3oFYTNsP8dx');
-    }
-  }
-
-  async sd_egWSstGkw8HHAR01(bh) {
-    try {
-      const HTTPServiceInstance: HTTPService =
-        this.__page_injector__.get(HTTPService);
-
-      let outputVariables = await HTTPServiceInstance.sd_ZjZwWFbxVVMtewVh(
-        bh.input.body,
-        bh.input.method,
-        undefined,
-        bh.input.url,
-        bh.input.params
-      );
-      this.page.result = outputVariables.input.result;
-
-      bh = this.sd_nEsjORXWHO6FRvFQ(bh);
-      //appendnew_next_sd_egWSstGkw8HHAR01
-      return bh;
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_egWSstGkw8HHAR01');
-    }
-  }
-
-  sd_nEsjORXWHO6FRvFQ(bh) {
-    try {
-      const page = this.page;
-      console.log(page.result.result.message);
-
-      bh = this.sd_FgYpBLBBEL49jqzw(bh);
-      //appendnew_next_sd_nEsjORXWHO6FRvFQ
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_nEsjORXWHO6FRvFQ');
-    }
-  }
-
-  async sd_FgYpBLBBEL49jqzw(bh) {
+  async sd_hP2lgWesuM87hk1S(bh) {
     try {
       let otherwiseFlag = true;
       if (
-        this.sdService.operators['se'](
-          this.page.result.result.message,
-          'ClientId Not Found.',
+        this.sdService.operators['null'](
+          this.page.product,
+          undefined,
           undefined,
           undefined
         )
       ) {
-        bh = this.sd_8BaTApcoS4EN859J(bh);
+        bh = this.sd_zq3TPINBzb3I5mFI(bh);
         otherwiseFlag = false;
       }
       if (
@@ -254,64 +137,208 @@ export class DetailsComponent {
           undefined
         )
       ) {
-        bh = await this.sd_QRuQKuCwhwEhqzwf(bh);
+        bh = await this.sd_kkbtaBoytpeRS7mq(bh);
         otherwiseFlag = false;
       }
 
       return bh;
     } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_FgYpBLBBEL49jqzw');
+      return await this.errorHandler(bh, e, 'sd_hP2lgWesuM87hk1S');
     }
   }
 
-  async sd_8BaTApcoS4EN859J(bh) {
-    try {
-      const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/home/customer');
-      await this.__page_injector__
-        .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
-
-      //appendnew_next_sd_8BaTApcoS4EN859J
-      return bh;
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_8BaTApcoS4EN859J');
-    }
-  }
-
-  async sd_QRuQKuCwhwEhqzwf(bh) {
-    try {
-      const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/home/cart');
-      await this.__page_injector__
-        .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
-
-      //appendnew_next_sd_QRuQKuCwhwEhqzwf
-      return bh;
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_QRuQKuCwhwEhqzwf');
-    }
-  }
-
-  async sd_gI7TnElBtjUhzmz1(bh) {
+  async sd_zq3TPINBzb3I5mFI(bh) {
     try {
       const { paramObj: qprm, path: path } =
         this.sdService.getPathAndQParamsObj('/home/scanner');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
 
-      //appendnew_next_sd_gI7TnElBtjUhzmz1
+      //appendnew_next_sd_zq3TPINBzb3I5mFI
       return bh;
     } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_gI7TnElBtjUhzmz1');
+      return await this.errorHandler(bh, e, 'sd_zq3TPINBzb3I5mFI');
+    }
+  }
+
+  sd_kkbtaBoytpeRS7mq(bh) {
+    try {
+      const page = this.page;
+      console.log(page.product);
+
+      //appendnew_next_sd_kkbtaBoytpeRS7mq
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_kkbtaBoytpeRS7mq');
+    }
+  }
+
+  sd_AsOyZBggnoZcRyca(bh) {
+    try {
+      bh.local.product = JSON.parse(localStorage.getItem('tempProduct'));
+
+      bh = this.sd_w8FiLxiw9gjejall(bh);
+      //appendnew_next_sd_AsOyZBggnoZcRyca
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_AsOyZBggnoZcRyca');
+    }
+  }
+
+  sd_w8FiLxiw9gjejall(bh) {
+    try {
+      bh.local.cartItems = JSON.parse(localStorage.getItem('cartItems'));
+
+      bh = this.sd_Z5SDIQ0WPH8PbfKF(bh);
+      //appendnew_next_sd_w8FiLxiw9gjejall
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_w8FiLxiw9gjejall');
+    }
+  }
+
+  async sd_Z5SDIQ0WPH8PbfKF(bh) {
+    try {
+      let otherwiseFlag = true;
+      if (
+        this.sdService.operators['null'](
+          bh.local.cartItems,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_827lktre26rPPUkV(bh);
+        otherwiseFlag = false;
+      }
+      if (
+        this.sdService.operators['else'](
+          otherwiseFlag,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = await this.sd_WxGsb2Imn6kn0oj2(bh);
+        otherwiseFlag = false;
+      }
+
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_Z5SDIQ0WPH8PbfKF');
+    }
+  }
+
+  sd_827lktre26rPPUkV(bh) {
+    try {
+      const page = this.page;
+      bh.local.product = [bh.local.product];
+
+      bh = this.sd_vILXnNzjV2LueKta(bh);
+      //appendnew_next_sd_827lktre26rPPUkV
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_827lktre26rPPUkV');
+    }
+  }
+
+  sd_vILXnNzjV2LueKta(bh) {
+    try {
+      localStorage.setItem('cartItems', JSON.stringify(bh.local.product));
+
+      bh = this.sd_zq3TPINBzb3I5mFI(bh);
+      //appendnew_next_sd_vILXnNzjV2LueKta
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_vILXnNzjV2LueKta');
+    }
+  }
+
+  sd_WxGsb2Imn6kn0oj2(bh) {
+    try {
+      const page = this.page;
+      bh.local.cartItems;
+      bh.pageInput.product;
+
+      bh.local.exist = false;
+      bh.local.cartItems.map((product) => {
+        if (product._id == bh.local.product._id) {
+          bh.local.exist = true;
+        }
+      });
+
+      bh = this.sd_kFb5kk5Qe4w6ugXz(bh);
+      //appendnew_next_sd_WxGsb2Imn6kn0oj2
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_WxGsb2Imn6kn0oj2');
+    }
+  }
+
+  sd_kFb5kk5Qe4w6ugXz(bh) {
+    try {
+      if (
+        this.sdService.operators['true'](
+          bh.local.exist,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_zq3TPINBzb3I5mFI(bh);
+      } else if (
+        this.sdService.operators['false'](
+          bh.local.exist,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_8QjBnTQndrRB7vVA(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_kFb5kk5Qe4w6ugXz');
+    }
+  }
+
+  sd_8QjBnTQndrRB7vVA(bh) {
+    try {
+      const page = this.page;
+      console.log(bh.local.cartItems);
+      bh.local.cartItems.push(bh.local.product);
+
+      bh = this.sd_cebPGqmlr2QGN2ze(bh);
+      //appendnew_next_sd_8QjBnTQndrRB7vVA
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_8QjBnTQndrRB7vVA');
+    }
+  }
+
+  sd_cebPGqmlr2QGN2ze(bh) {
+    try {
+      localStorage.setItem('cartItems', JSON.stringify(bh.local.cartItems));
+
+      bh = this.sd_zq3TPINBzb3I5mFI(bh);
+      //appendnew_next_sd_cebPGqmlr2QGN2ze
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_cebPGqmlr2QGN2ze');
+    }
+  }
+
+  sd_M53uKBvgvycvgMEo(bh) {
+    try {
+      localStorage.removeItem('tempProduct');
+
+      bh = this.sd_zq3TPINBzb3I5mFI(bh);
+      //appendnew_next_sd_M53uKBvgvycvgMEo
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_M53uKBvgvycvgMEo');
     }
   }
 
@@ -321,15 +348,6 @@ export class DetailsComponent {
     const bh: any = this.__page_injector__
       .get(SDPageCommonService)
       .constructFlowObject(this);
-    {
-      const _route_sd_EdN3oyxbMOubWOEQ = this.page._route_sd_EdN3oyxbMOubWOEQ;
-      if (
-        _route_sd_EdN3oyxbMOubWOEQ &&
-        typeof _route_sd_EdN3oyxbMOubWOEQ.unsubscribe === 'function'
-      ) {
-        _route_sd_EdN3oyxbMOubWOEQ.unsubscribe();
-      }
-    }
     this.__page_injector__.get(SDPageCommonService).deletePageFromMap(this);
   }
 

@@ -8,11 +8,11 @@ import {
   Input,
   Output,
   EventEmitter,
+  SimpleChanges,
+  OnChanges,
   AfterViewInit,
   ViewChild,
   ViewChildren,
-  SimpleChanges,
-  OnChanges,
 } from '@angular/core'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
@@ -102,12 +102,41 @@ export class LoginComponent {
 
   sd_1DC4mAk7oUshCOHw(bh) {
     try {
-      bh = this.sd_rPkOYGKWqUnpw3Oc(bh);
       bh = this.sd_zBANKzNWLlWmgY7J(bh);
+      bh = this.sd_rPkOYGKWqUnpw3Oc(bh);
       //appendnew_next_sd_1DC4mAk7oUshCOHw
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_1DC4mAk7oUshCOHw');
+    }
+  }
+
+  sd_zBANKzNWLlWmgY7J(bh) {
+    try {
+      this.page.formGroup = FormGroup;
+      this.page.formControl = FormControl;
+      this.page.validator = Validators;
+
+      bh = this.sd_iiEL6EKSKfAeNbnY(bh);
+      //appendnew_next_sd_zBANKzNWLlWmgY7J
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_zBANKzNWLlWmgY7J');
+    }
+  }
+
+  sd_iiEL6EKSKfAeNbnY(bh) {
+    try {
+      const page = this.page;
+      page.addRegisterForm = new page.formGroup({
+        email: new page.formControl('', [page.validator.required]),
+        password: new page.formControl('', [page.validator.required]),
+      });
+
+      //appendnew_next_sd_iiEL6EKSKfAeNbnY
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_iiEL6EKSKfAeNbnY');
     }
   }
 
@@ -173,35 +202,6 @@ export class LoginComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_8bPc8W6ORqgO79cJ');
-    }
-  }
-
-  sd_zBANKzNWLlWmgY7J(bh) {
-    try {
-      this.page.formGroup = FormGroup;
-      this.page.formControl = FormControl;
-      this.page.validator = Validators;
-
-      bh = this.sd_iiEL6EKSKfAeNbnY(bh);
-      //appendnew_next_sd_zBANKzNWLlWmgY7J
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_zBANKzNWLlWmgY7J');
-    }
-  }
-
-  sd_iiEL6EKSKfAeNbnY(bh) {
-    try {
-      const page = this.page;
-      page.addRegisterForm = new page.formGroup({
-        email: new page.formControl('', [page.validator.required]),
-        password: new page.formControl('', [page.validator.required]),
-      });
-
-      //appendnew_next_sd_iiEL6EKSKfAeNbnY
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_iiEL6EKSKfAeNbnY');
     }
   }
 

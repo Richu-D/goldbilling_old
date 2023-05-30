@@ -6,7 +6,7 @@
         "label": "Profile",
         "disabled": false,
         "info": "",
-        "functionSeq": 3,
+        "functionSeq": 5,
         "generateNext": true,
         "serviceName": "ProfileComponent"
     },
@@ -24,7 +24,7 @@
         "functionName": "sd_UkTkbQz9KEBwozUf",
         "category": "Lifecycle Events",
         "x": 45,
-        "y": 40,
+        "y": 60,
         "wires": [
             [
                 "sd_pEf7YYcls7IHRyio"
@@ -44,65 +44,11 @@
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [
-            {
-                "textIp": "userName",
-                "typedIpValue": {
-                    "type": "bh",
-                    "value": "system.currentUser.displayName"
-                }
-            }
-        ],
+        "globalVariables": [],
         "functionName": "sd_pEf7YYcls7IHRyio",
         "category": "Function",
         "x": 165,
-        "y": 40,
-        "wires": [
-            [
-                "sd_pKBVVhLacoUkmIVi"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "ProfileComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_y8IMMPOWgzA6hIHP",
-        "type": "PageStart",
-        "z": "sd_wHGIpBBLDR91Bzlx",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "logout",
-        "outputs": 1,
-        "inputVariables": [],
-        "localVariables": [],
-        "flow_type": "sync",
-        "functionName": "logout",
-        "category": "General",
-        "x": 120,
-        "y": 200,
-        "wires": [
-            [
-                "sd_w0qWjQXwfP4CsoIO"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "ProfileComponent"
-    },
-    {
-        "id": "sd_w0qWjQXwfP4CsoIO",
-        "type": "Script",
-        "z": "sd_wHGIpBBLDR91Bzlx",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "bh.system.oauthService.logout(\"/login\")",
-        "functionName": "sd_w0qWjQXwfP4CsoIO",
-        "category": "Function",
-        "x": 285,
-        "y": 200,
+        "y": 60,
         "wires": [
             []
         ],
@@ -121,17 +67,16 @@
         "script": "bh.input.method = 'get';\nbh.input.url = 'salesman/dashboard';\n",
         "functionName": "sd_pKBVVhLacoUkmIVi",
         "category": "Function",
-        "x": 285,
-        "y": 40,
+        "x": 445,
+        "y": 600,
         "wires": [
             [
                 "sd_FRIPlXvZL5GkEx5x"
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "ProfileComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "ProfileComponent"
     },
     {
         "id": "sd_FRIPlXvZL5GkEx5x",
@@ -212,17 +157,16 @@
         "accept_csd": true,
         "functionName": "sd_FRIPlXvZL5GkEx5x",
         "category": "General",
-        "x": 405,
-        "y": 40,
+        "x": 565,
+        "y": 600,
         "wires": [
             [
                 "sd_iBZ3w0J9umcTmBsG"
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "ProfileComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "ProfileComponent"
     },
     {
         "id": "sd_iBZ3w0J9umcTmBsG",
@@ -234,17 +178,16 @@
         "script": "page.cancel = 0;\npage.pending = 0;\npage.completed = 0;\npage.result.result.DashBoard.forEach(item => {\n  if (item._id === \"Cancelled\") {\n    page.cancel = item.count;\n  }\n  if (item._id === \"Pending\") {\n    page.pending = item.count;\n  }\n  if (item._id === \"Completed\") {\n    page.completed = item.count;\n  }\n\n});",
         "functionName": "sd_iBZ3w0J9umcTmBsG",
         "category": "Function",
-        "x": 405,
-        "y": 140,
+        "x": 565,
+        "y": 700,
         "wires": [
             [
                 "sd_T7RCnvAKirTl2I5e"
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "ProfileComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "ProfileComponent"
     },
     {
         "id": "sd_T7RCnvAKirTl2I5e",
@@ -256,17 +199,16 @@
         "script": "bh.input.method = 'get';\nbh.input.url = 'salesMan/order/all';\n",
         "functionName": "sd_T7RCnvAKirTl2I5e",
         "category": "Function",
-        "x": 405,
-        "y": 280,
+        "x": 565,
+        "y": 840,
         "wires": [
             [
                 "sd_ze27vcGrypuwQdad"
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "ProfileComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "ProfileComponent"
     },
     {
         "id": "sd_ze27vcGrypuwQdad",
@@ -347,17 +289,16 @@
         "accept_csd": true,
         "functionName": "sd_ze27vcGrypuwQdad",
         "category": "General",
-        "x": 525,
-        "y": 280,
+        "x": 685,
+        "y": 840,
         "wires": [
             [
                 "sd_Ok2qPTzTDOzpWFUs"
             ]
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "ProfileComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "ProfileComponent"
     },
     {
         "id": "sd_Ok2qPTzTDOzpWFUs",
@@ -369,15 +310,14 @@
         "script": "page.prod = [];\n\npage.details.result.product.forEach(item=> {\n    page.prod.push({\n        name: item.product.name,\n        quantity: item.quantity\n    })\n});\n\nconst items = page.prod;\n\nconst quantities = {};\n\n// Loop through the array and sum the quantities for each name\nfor (let i = 0; i < items.length; i++) {\n  const { name, quantity } = items[i];\n  quantities[name] = (quantities[name] || 0) + quantity;\n}\n\n// Convert the quantities object to an array of objects\nconst result = Object.entries(quantities).map(([name, quantity]) => ({\n  name,\n  quantity,\n}));\n\npage.productOrders = result;",
         "functionName": "sd_Ok2qPTzTDOzpWFUs",
         "category": "Function",
-        "x": 625,
-        "y": 280,
+        "x": 785,
+        "y": 840,
         "wires": [
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "ProfileComponent",
-        "generated": true
+        "generateNext": true,
+        "serviceName": "ProfileComponent"
     },
     {
         "id": "sd_CVB3uIcNgv0JeeFU",
@@ -392,8 +332,8 @@
         "flow_type": "sync",
         "functionName": "orderDetails",
         "category": "General",
-        "x": 180,
-        "y": 400,
+        "x": 200,
+        "y": 600,
         "wires": [
             [
                 "sd_ztJIi6YfyI3CMVl1"
@@ -411,10 +351,81 @@
         "nodeType": "flow",
         "name": "",
         "path": "/home/orders",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
         "functionName": "sd_ztJIi6YfyI3CMVl1",
         "category": "Navigation",
-        "x": 320,
-        "y": 400,
+        "x": 340,
+        "y": 600,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ProfileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_DKZpEj5ZD6luXRp6",
+        "type": "PageStart",
+        "z": "sd_wHGIpBBLDR91Bzlx",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "logout_5",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "logout_5",
+        "category": "General",
+        "x": 140,
+        "y": 1160,
+        "wires": [
+            [
+                "sd_QbXUsqsGwUy7u5a1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ProfileComponent"
+    },
+    {
+        "id": "sd_QbXUsqsGwUy7u5a1",
+        "type": "SnackBar",
+        "z": "sd_wHGIpBBLDR91Bzlx",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "\"enter the logout logic for your application..!\""
+        },
+        "action": {
+            "type": "str",
+            "value": "okay"
+        },
+        "duration": {
+            "type": "num",
+            "value": "2000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_4No8yOdR5FAZGk6v_5",
+        "category": "General",
+        "x": 300,
+        "y": 1160,
         "wires": [
             []
         ],

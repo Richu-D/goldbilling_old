@@ -23,8 +23,8 @@
         "pageVariables": [],
         "functionName": "sd_ilZ4tlQP3zwsX014",
         "category": "Lifecycle Events",
-        "x": 30,
-        "y": 30,
+        "x": 245,
+        "y": 40,
         "wires": [
             [
                 "sd_C5qDvc31cazOGMeg"
@@ -47,164 +47,17 @@
         "globalVariables": [],
         "functionName": "sd_C5qDvc31cazOGMeg",
         "category": "Function",
-        "x": 180,
-        "y": 30,
+        "x": 395,
+        "y": 40,
         "wires": [
             [
-                "sd_SOAk98gKhZHk8ZzQ"
+                "sd_OjjDr811nmDw8T2H"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "DetailsComponent",
         "generated": true
-    },
-    {
-        "id": "sd_eK1HmAoAyigBg4r0",
-        "type": "Script",
-        "z": "sd_FmtEW0SPH5Nubwb3",
-        "viewType": "common",
-        "nodeType": "flow",
-        "name": "",
-        "script": "bh.input.method = 'get';\nbh.input.url = 'product';\n\npage.id = bh.input.params",
-        "functionName": "sd_eK1HmAoAyigBg4r0",
-        "category": "Function",
-        "x": 305,
-        "y": 159,
-        "wires": [
-            [
-                "sd_8JIhdZPUfZoHXf7l"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "DetailsComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_8JIhdZPUfZoHXf7l",
-        "type": "PageCallService",
-        "z": "sd_FmtEW0SPH5Nubwb3",
-        "viewType": "pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 1,
-        "isValidNode": true,
-        "noerr": 0,
-        "service": {
-            "id": "sd_qp1n840XhLHxXRUW",
-            "type": "tab",
-            "createdDate": "2023-05-01T12:27:41.542Z",
-            "label": "HTTPService",
-            "disabled": false,
-            "info": "",
-            "functionSeq": 0,
-            "tabType": "client"
-        },
-        "flow": {
-            "flowId": "sd_ZjZwWFbxVVMtewVh",
-            "flowName": "sd_ZjZwWFbxVVMtewVh"
-        },
-        "inputVariables": [
-            {
-                "key": "body",
-                "map": true,
-                "valueType": "bh.input",
-                "value": "body"
-            },
-            {
-                "key": "method",
-                "map": true,
-                "valueType": "bh.input",
-                "value": "method"
-            },
-            {
-                "key": "result",
-                "map": true,
-                "valueType": "bh",
-                "value": ""
-            },
-            {
-                "key": "url",
-                "map": true,
-                "valueType": "bh.input",
-                "value": "url"
-            },
-            {
-                "key": "params",
-                "map": true,
-                "valueType": "bh.input",
-                "value": "params"
-            }
-        ],
-        "outputMapping": [
-            {
-                "mapVarType": "input",
-                "key": "result",
-                "valueType": "this.page",
-                "value": "products",
-                "mapVarName": "result",
-                "localVar": "this.page.products"
-            }
-        ],
-        "serviceImportPath": "app/sd-services/HTTPService",
-        "startName": "sd_ZjZwWFbxVVMtewVh",
-        "inputParams": [
-            "bh.input.body",
-            "bh.input.method",
-            null,
-            "bh.input.url",
-            "bh.input.params"
-        ],
-        "accept_bh": false,
-        "accept_csd": true,
-        "functionName": "sd_8JIhdZPUfZoHXf7l",
-        "category": "General",
-        "x": 460,
-        "y": 160,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "DetailsComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_EdN3oyxbMOubWOEQ",
-        "type": "NavigationListener",
-        "z": "sd_FmtEW0SPH5Nubwb3",
-        "viewType": "pages",
-        "nodeType": "start",
-        "name": "",
-        "operationType": "queryParams",
-        "operation": "keys",
-        "key": "this.page",
-        "resultMapping": "bh.input.params",
-        "functionName": "sd_EdN3oyxbMOubWOEQ",
-        "category": "Navigation",
-        "x": 165,
-        "y": 160,
-        "wires": [
-            [
-                "sd_eK1HmAoAyigBg4r0"
-            ]
-        ],
-        "__ssdTypeInputs__": {
-            "key": {
-                "type": "this.page",
-                "value": "",
-                "constant": false
-            },
-            "resultMapping": {
-                "type": "bh.input",
-                "value": "params",
-                "constant": false
-            }
-        },
-        "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "DetailsComponent"
     },
     {
         "id": "sd_zHJ1ybUSfbfvUmr8",
@@ -219,86 +72,16 @@
         "flow_type": "sync",
         "functionName": "navigateToCart",
         "category": "General",
-        "x": 125,
-        "y": 300,
+        "x": 185,
+        "y": 440,
         "wires": [
             [
-                "sd_PMyrV3oFYTNsP8dx"
+                "sd_AsOyZBggnoZcRyca"
             ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": true,
         "serviceName": "DetailsComponent"
-    },
-    {
-        "id": "sd_8BaTApcoS4EN859J",
-        "type": "Navigation",
-        "z": "sd_FmtEW0SPH5Nubwb3",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "path": "/home/customer",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
-        "functionName": "sd_8BaTApcoS4EN859J",
-        "category": "Navigation",
-        "x": 685,
-        "y": 240,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "DetailsComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_SOAk98gKhZHk8ZzQ",
-        "type": "PageCallService",
-        "z": "sd_FmtEW0SPH5Nubwb3",
-        "viewType": "pages",
-        "nodeType": "flow",
-        "name": "",
-        "outputs": 1,
-        "isValidNode": true,
-        "noerr": 0,
-        "service": {
-            "id": "sd_qp1n840XhLHxXRUW",
-            "type": "tab",
-            "createdDate": "2023-05-01T12:27:41.542Z",
-            "label": "HTTPService",
-            "disabled": false,
-            "info": "",
-            "functionSeq": 0,
-            "tabType": "client"
-        },
-        "flow": {
-            "flowId": "sd_EGT9Ia09cyUunsrk",
-            "flowName": "routesCheck"
-        },
-        "inputVariables": [],
-        "outputMapping": [],
-        "serviceImportPath": "app/sd-services/HTTPService",
-        "startName": "routesCheck",
-        "inputParams": [],
-        "accept_bh": false,
-        "accept_csd": true,
-        "functionName": "sd_SOAk98gKhZHk8ZzQ",
-        "category": "General",
-        "x": 345,
-        "y": 40,
-        "wires": [
-            []
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "DetailsComponent",
-        "generated": true
     },
     {
         "id": "sd_HkC2vCC0RoXgSMLX",
@@ -313,11 +96,11 @@
         "flow_type": "sync",
         "functionName": "navigateToScan",
         "category": "General",
-        "x": 165,
-        "y": 420,
+        "x": 440,
+        "y": 210,
         "wires": [
             [
-                "sd_gI7TnElBtjUhzmz1"
+                "sd_M53uKBvgvycvgMEo"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -325,27 +108,50 @@
         "serviceName": "DetailsComponent"
     },
     {
-        "id": "sd_gI7TnElBtjUhzmz1",
-        "type": "Navigation",
+        "id": "sd_OjjDr811nmDw8T2H",
+        "type": "Storage",
         "z": "sd_FmtEW0SPH5Nubwb3",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "path": "",
-        "pathMap": {
+        "operationType": "getItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
             "type": "str",
-            "value": "/home/scanner"
+            "value": "tempProduct"
         },
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
-        "functionName": "sd_gI7TnElBtjUhzmz1",
-        "category": "Navigation",
-        "x": 485,
-        "y": 420,
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "product"
+        },
+        "functionName": "sd_OjjDr811nmDw8T2H",
+        "category": "Storage",
+        "x": 495,
+        "y": 50,
+        "wires": [
+            [
+                "sd_hP2lgWesuM87hk1S"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "DetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_kkbtaBoytpeRS7mq",
+        "type": "Script",
+        "z": "sd_FmtEW0SPH5Nubwb3",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(page.product)",
+        "functionName": "sd_kkbtaBoytpeRS7mq",
+        "category": "Function",
+        "x": 720,
+        "y": 110,
         "wires": [
             []
         ],
@@ -355,111 +161,28 @@
         "generated": true
     },
     {
-        "id": "sd_PMyrV3oFYTNsP8dx",
-        "type": "Script",
+        "id": "sd_M53uKBvgvycvgMEo",
+        "type": "Storage",
         "z": "sd_FmtEW0SPH5Nubwb3",
-        "viewType": "common",
+        "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "script": "bh.input.method = 'post';\nbh.input.url = 'cart';\n\nbh.input.body = {\n    proid: page.id.id\n}",
-        "functionName": "sd_PMyrV3oFYTNsP8dx",
-        "category": "Function",
-        "x": 225,
-        "y": 300,
-        "wires": [
-            [
-                "sd_egWSstGkw8HHAR01"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "DetailsComponent",
-        "generated": true
-    },
-    {
-        "id": "sd_egWSstGkw8HHAR01",
-        "type": "PageCallService",
-        "z": "sd_FmtEW0SPH5Nubwb3",
-        "viewType": "pages",
-        "nodeType": "flow",
-        "name": "",
+        "operationType": "removeItem",
+        "storageType": "localStorage",
         "outputs": 1,
-        "isValidNode": true,
-        "noerr": 0,
-        "service": {
-            "id": "sd_qp1n840XhLHxXRUW",
-            "type": "tab",
-            "createdDate": "2023-05-01T12:27:41.542Z",
-            "label": "HTTPService",
-            "disabled": false,
-            "info": "",
-            "functionSeq": 0,
-            "tabType": "client"
+        "key": {
+            "type": "str",
+            "value": "tempProduct"
         },
-        "flow": {
-            "flowId": "sd_ZjZwWFbxVVMtewVh",
-            "flowName": "sd_ZjZwWFbxVVMtewVh"
-        },
-        "inputVariables": [
-            {
-                "key": "body",
-                "map": true,
-                "valueType": "bh.input",
-                "value": "body"
-            },
-            {
-                "key": "method",
-                "map": true,
-                "valueType": "bh.input",
-                "value": "method"
-            },
-            {
-                "key": "result",
-                "map": true,
-                "valueType": "bh",
-                "value": ""
-            },
-            {
-                "key": "url",
-                "map": true,
-                "valueType": "bh.input",
-                "value": "url"
-            },
-            {
-                "key": "params",
-                "map": true,
-                "valueType": "bh.input",
-                "value": "params"
-            }
-        ],
-        "outputMapping": [
-            {
-                "mapVarType": "input",
-                "key": "result",
-                "valueType": "this.page",
-                "value": "result",
-                "mapVarName": "result",
-                "localVar": "this.page.result"
-            }
-        ],
-        "serviceImportPath": "app/sd-services/HTTPService",
-        "startName": "sd_ZjZwWFbxVVMtewVh",
-        "inputParams": [
-            "bh.input.body",
-            "bh.input.method",
-            null,
-            "bh.input.url",
-            "bh.input.params"
-        ],
-        "accept_bh": false,
-        "accept_csd": true,
-        "functionName": "sd_egWSstGkw8HHAR01",
-        "category": "General",
-        "x": 325,
-        "y": 300,
+        "value": {},
+        "resultMapping": {},
+        "functionName": "sd_M53uKBvgvycvgMEo",
+        "category": "Storage",
+        "x": 540,
+        "y": 210,
         "wires": [
             [
-                "sd_nEsjORXWHO6FRvFQ"
+                "sd_zq3TPINBzb3I5mFI"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -468,21 +191,38 @@
         "generated": true
     },
     {
-        "id": "sd_FgYpBLBBEL49jqzw",
+        "id": "sd_zq3TPINBzb3I5mFI",
+        "type": "Navigation",
+        "z": "sd_FmtEW0SPH5Nubwb3",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home/scanner",
+        "functionName": "sd_zq3TPINBzb3I5mFI",
+        "category": "Navigation",
+        "x": 1325,
+        "y": 160,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "DetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_hP2lgWesuM87hk1S",
         "type": "PageSwitch",
         "z": "sd_FmtEW0SPH5Nubwb3",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "property": "result.result.message",
+        "property": "product",
         "propertyType": "this.page",
-        "propertyGv": "this.page.result.result.message",
+        "propertyGv": "this.page.product",
         "rules": [
             {
-                "t": "se",
-                "v": "ClientId Not Found.",
-                "vt": "str",
-                "gv": "\"ClientId Not Found.\""
+                "t": "null"
             },
             {
                 "t": "else"
@@ -491,16 +231,16 @@
         "checkall": "false",
         "repair": false,
         "outputs": 2,
-        "functionName": "sd_FgYpBLBBEL49jqzw",
+        "functionName": "sd_hP2lgWesuM87hk1S",
         "category": "Function",
-        "x": 525,
-        "y": 300,
+        "x": 575,
+        "y": 50,
         "wires": [
             [
-                "sd_8BaTApcoS4EN859J"
+                "sd_zq3TPINBzb3I5mFI"
             ],
             [
-                "sd_QRuQKuCwhwEhqzwf"
+                "sd_kkbtaBoytpeRS7mq"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -509,26 +249,32 @@
         "generated": true
     },
     {
-        "id": "sd_QRuQKuCwhwEhqzwf",
-        "type": "Navigation",
+        "id": "sd_AsOyZBggnoZcRyca",
+        "type": "Storage",
         "z": "sd_FmtEW0SPH5Nubwb3",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "path": "/home/cart",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
-        "functionName": "sd_QRuQKuCwhwEhqzwf",
-        "category": "Navigation",
-        "x": 685,
-        "y": 360,
+        "operationType": "getItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "tempProduct"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "bh.local",
+            "value": "product"
+        },
+        "functionName": "sd_AsOyZBggnoZcRyca",
+        "category": "Storage",
+        "x": 265,
+        "y": 440,
         "wires": [
-            []
+            [
+                "sd_w8FiLxiw9gjejall"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -536,20 +282,239 @@
         "generated": true
     },
     {
-        "id": "sd_nEsjORXWHO6FRvFQ",
+        "id": "sd_w8FiLxiw9gjejall",
+        "type": "Storage",
+        "z": "sd_FmtEW0SPH5Nubwb3",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "cartItems"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "bh.local",
+            "value": "cartItems"
+        },
+        "functionName": "sd_w8FiLxiw9gjejall",
+        "category": "Storage",
+        "x": 345,
+        "y": 440,
+        "wires": [
+            [
+                "sd_Z5SDIQ0WPH8PbfKF"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "DetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Z5SDIQ0WPH8PbfKF",
+        "type": "PageSwitch",
+        "z": "sd_FmtEW0SPH5Nubwb3",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "cartItems",
+        "propertyType": "bh.local",
+        "propertyGv": "bh.local.cartItems",
+        "rules": [
+            {
+                "t": "null"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_Z5SDIQ0WPH8PbfKF",
+        "category": "Function",
+        "x": 525,
+        "y": 440,
+        "wires": [
+            [
+                "sd_827lktre26rPPUkV"
+            ],
+            [
+                "sd_WxGsb2Imn6kn0oj2"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "DetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_vILXnNzjV2LueKta",
+        "type": "Storage",
+        "z": "sd_FmtEW0SPH5Nubwb3",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "cartItems"
+        },
+        "value": {
+            "type": "bh.local",
+            "value": "product"
+        },
+        "resultMapping": {},
+        "functionName": "sd_vILXnNzjV2LueKta",
+        "category": "Storage",
+        "x": 705,
+        "y": 320,
+        "wires": [
+            [
+                "sd_zq3TPINBzb3I5mFI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "DetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_827lktre26rPPUkV",
         "type": "Script",
         "z": "sd_FmtEW0SPH5Nubwb3",
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "console.log(page.result.result.message)",
-        "functionName": "sd_nEsjORXWHO6FRvFQ",
+        "script": "bh.local.product=[bh.local.product]",
+        "functionName": "sd_827lktre26rPPUkV",
         "category": "Function",
-        "x": 425,
-        "y": 300,
+        "x": 620,
+        "y": 380,
         "wires": [
             [
-                "sd_FgYpBLBBEL49jqzw"
+                "sd_vILXnNzjV2LueKta"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "DetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_cebPGqmlr2QGN2ze",
+        "type": "Storage",
+        "z": "sd_FmtEW0SPH5Nubwb3",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "localStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "cartItems"
+        },
+        "value": {
+            "type": "bh.local",
+            "value": "cartItems"
+        },
+        "resultMapping": {},
+        "functionName": "sd_cebPGqmlr2QGN2ze",
+        "category": "Storage",
+        "x": 985,
+        "y": 520,
+        "wires": [
+            [
+                "sd_zq3TPINBzb3I5mFI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "DetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_8QjBnTQndrRB7vVA",
+        "type": "Script",
+        "z": "sd_FmtEW0SPH5Nubwb3",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.local.cartItems)\nbh.local.cartItems.push(bh.local.product)",
+        "functionName": "sd_8QjBnTQndrRB7vVA",
+        "category": "Function",
+        "x": 865,
+        "y": 520,
+        "wires": [
+            [
+                "sd_cebPGqmlr2QGN2ze"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "DetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_WxGsb2Imn6kn0oj2",
+        "type": "Script",
+        "z": "sd_FmtEW0SPH5Nubwb3",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.cartItems\nbh.pageInput.product\n\nbh.local.exist=false;\nbh.local.cartItems.map(product=>{\n    if(product._id==bh.local.product._id){\n        bh.local.exist=true;\n    }\n})",
+        "functionName": "sd_WxGsb2Imn6kn0oj2",
+        "category": "Function",
+        "x": 625,
+        "y": 500,
+        "wires": [
+            [
+                "sd_kFb5kk5Qe4w6ugXz"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "DetailsComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_kFb5kk5Qe4w6ugXz",
+        "type": "PageSwitch",
+        "z": "sd_FmtEW0SPH5Nubwb3",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "exist",
+        "propertyType": "bh.local",
+        "propertyGv": "bh.local.exist",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_kFb5kk5Qe4w6ugXz",
+        "category": "Function",
+        "x": 745,
+        "y": 500,
+        "wires": [
+            [
+                "sd_zq3TPINBzb3I5mFI"
+            ],
+            [
+                "sd_8QjBnTQndrRB7vVA"
             ]
         ],
         "__n_excludedFromValidation__": {},

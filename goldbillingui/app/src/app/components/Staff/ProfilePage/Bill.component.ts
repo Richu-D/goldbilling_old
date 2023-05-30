@@ -8,6 +8,8 @@ import {
   Input,
   Output,
   EventEmitter,
+  SimpleChanges,
+  OnChanges,
   AfterViewInit,
   ViewChild,
   ViewChildren,

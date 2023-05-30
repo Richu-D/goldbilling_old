@@ -122,7 +122,9 @@
                     "_attrDef": "p",
                     "_complexity": "advanced",
                     "displayAs": "newVariable",
-                    "attrType": "INPUT"
+                    "attrType": "INPUT",
+                    "inValid": false,
+                    "message": ""
                 }
             ]
         },

@@ -1,18 +1,18 @@
 {
-    "ff07ce3d-0f03-b540-69ef-18f9d9ed95ce": {
-        "paletteKey": "FlexLayoutRow",
+    "3fbe6acc-31b3-21fe-9782-3f0bebcdc958": {
+        "paletteKey": "FlexLayoutCol",
         "commentid": null,
         "designerReference": [
             {
                 "_key": "componentLabel",
-                "_value": "Row",
+                "_value": "Column",
                 "_type": "kv",
                 "_attrDef": "p",
                 "_useAsLabel": true
             },
             {
                 "_key": "style",
-                "_value": "",
+                "_value": "height: 100vh;",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -24,7 +24,7 @@
             },
             {
                 "_key": "fxFlex",
-                "_value": "",
+                "_value": "100",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -42,13 +42,13 @@
             },
             {
                 "_key": "layoutAlign",
-                "_value": "start",
+                "_value": "none",
                 "_type": "a",
                 "_attrDef": "p"
             },
             {
                 "_key": "pLayoutAlign",
-                "_value": "stretch",
+                "_value": "none",
                 "_type": "a",
                 "_attrDef": "p"
             },
@@ -59,21 +59,40 @@
                 "_attrDef": "p"
             }
         ],
-        "3fbe6acc-31b3-21fe-9782-3f0bebcdc958": {
-            "paletteKey": "FlexLayoutCol",
-            "parentEditorKey": "ff07ce3d-0f03-b540-69ef-18f9d9ed95ce",
+        "5f4cc177-3adb-4556-9f9d-ddb09513b124": {
+            "paletteKey": "NG-RouterOutlet",
+            "parentEditorKey": "3fbe6acc-31b3-21fe-9782-3f0bebcdc958",
             "commentid": null,
             "designerReference": [
                 {
                     "_key": "componentLabel",
-                    "_value": "Column",
+                    "_value": "Router Outlet",
                     "_type": "kv",
                     "_attrDef": "p",
                     "_useAsLabel": true
                 },
                 {
+                    "_key": "(activate)",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "(deactivate)",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                }
+            ]
+        },
+        "39f76e3f-1184-9e2d-c846-f02250693a92": {
+            "paletteKey": "NEUTRINOS_PACKAGE_goldbilling_PALETTE_KEY_navbar",
+            "parentEditorKey": "3fbe6acc-31b3-21fe-9782-3f0bebcdc958",
+            "commentid": null,
+            "designerReference": [
+                {
                     "_key": "style",
-                    "_value": "height: 100vh;",
+                    "_value": "",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -84,96 +103,48 @@
                     "_attrDef": "p"
                 },
                 {
-                    "_key": "fxFlex",
-                    "_value": "100",
+                    "_key": "componentLabel",
+                    "_value": "navbar",
                     "_type": "kv",
-                    "_attrDef": "p"
+                    "_attrDef": "p",
+                    "_useAsLabel": true
                 },
                 {
-                    "_key": "fxLayoutGap",
-                    "_value": "",
-                    "_type": "kv",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "wrap",
-                    "_value": "wrap",
+                    "_key": "alignNav",
+                    "_value": "bottom",
                     "_type": "a",
-                    "_attrDef": "p"
+                    "_attrDef": "p",
+                    "_useAsLabel": true
                 },
                 {
-                    "_key": "layoutAlign",
-                    "_value": "none",
+                    "_key": "backgroundColor",
+                    "_value": "#740808",
                     "_type": "a",
-                    "_attrDef": "p"
+                    "_attrDef": "p",
+                    "_useAsLabel": true
                 },
                 {
-                    "_key": "pLayoutAlign",
-                    "_value": "none",
+                    "_key": "color",
+                    "_value": "white",
                     "_type": "a",
-                    "_attrDef": "p"
+                    "_attrDef": "p",
+                    "_useAsLabel": true
                 },
                 {
-                    "_key": "[fxShow]",
-                    "_value": "true",
-                    "_type": "kv",
-                    "_attrDef": "p"
+                    "_key": "font-size",
+                    "_value": "14px",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
+                },
+                {
+                    "_key": "font-weight",
+                    "_value": "400",
+                    "_type": "a",
+                    "_attrDef": "p",
+                    "_useAsLabel": true
                 }
-            ],
-            "5f4cc177-3adb-4556-9f9d-ddb09513b124": {
-                "paletteKey": "NG-RouterOutlet",
-                "parentEditorKey": "3fbe6acc-31b3-21fe-9782-3f0bebcdc958",
-                "commentid": null,
-                "designerReference": [
-                    {
-                        "_key": "componentLabel",
-                        "_value": "Router Outlet",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_useAsLabel": true
-                    },
-                    {
-                        "_key": "(activate)",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "(deactivate)",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    }
-                ]
-            },
-            "f904f824-b1c3-ee9e-6c4b-5176ce8fad37": {
-                "paletteKey": "NEUTRINOS_VIEW_Navbar",
-                "parentEditorKey": "3fbe6acc-31b3-21fe-9782-3f0bebcdc958",
-                "commentid": null,
-                "designerReference": [
-                    {
-                        "_key": "componentLabel",
-                        "_value": "Navbar",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_useAsLabel": true
-                    },
-                    {
-                        "_key": "style",
-                        "_value": "position:absolute;",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "class",
-                        "_value": [
-                            "navbar"
-                        ],
-                        "_type": "dav",
-                        "_attrDef": "p"
-                    }
-                ]
-            }
+            ]
         }
     }
 }

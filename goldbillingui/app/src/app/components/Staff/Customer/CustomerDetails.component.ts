@@ -8,6 +8,8 @@ import {
   Input,
   Output,
   EventEmitter,
+  SimpleChanges,
+  OnChanges,
   AfterViewInit,
   ViewChild,
   ViewChildren,
@@ -15,13 +17,13 @@ import {
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.service'; //_splitter_
-import { HTTPService } from 'app/sd-services/HTTPService'; //_splitter_
 import {
   FormGroup,
   FormControl,
   Validators,
   FormBuilder,
 } from '@angular/forms'; //_splitter_
+import { HTTPService } from 'app/sd-services/HTTPService'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -63,7 +65,7 @@ export class CustomerDetailsComponent {
 
   sd_dX7VufnNfIM9GPeP(bh) {
     try {
-      bh = this.sd_H6MIdat0honRkZSN(bh);
+      bh = this.sd_tLNwWIqkA4PwvlHt(bh);
       //appendnew_next_sd_dX7VufnNfIM9GPeP
       return bh;
     } catch (e) {
@@ -87,31 +89,6 @@ export class CustomerDetailsComponent {
   }
 
   //appendnew_flow_CustomerDetailsComponent_start
-
-  sd_H6MIdat0honRkZSN(bh) {
-    try {
-      bh = this.sd_3ZqCct5fyLQJZ2T2(bh);
-      //appendnew_next_sd_H6MIdat0honRkZSN
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_H6MIdat0honRkZSN');
-    }
-  }
-
-  async sd_3ZqCct5fyLQJZ2T2(bh) {
-    try {
-      const HTTPServiceInstance: HTTPService =
-        this.__page_injector__.get(HTTPService);
-
-      let outputVariables = await HTTPServiceInstance.routesCheck();
-
-      bh = this.sd_tLNwWIqkA4PwvlHt(bh);
-      //appendnew_next_sd_3ZqCct5fyLQJZ2T2
-      return bh;
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_3ZqCct5fyLQJZ2T2');
-    }
-  }
 
   sd_tLNwWIqkA4PwvlHt(bh) {
     try {

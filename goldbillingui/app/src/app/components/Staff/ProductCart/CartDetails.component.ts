@@ -8,11 +8,11 @@ import {
   Input,
   Output,
   EventEmitter,
+  SimpleChanges,
+  OnChanges,
   AfterViewInit,
   ViewChild,
   ViewChildren,
-  SimpleChanges,
-  OnChanges,
 } from '@angular/core'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_

@@ -325,5 +325,20 @@
         "parentDeps": {
             "neutrinos-route": "1.0.0"
         }
+    },
+    "goldbilling": {
+        "name": "goldbilling",
+        "version": "1.0.0",
+        "packageType": "studio-package",
+        "deps": {
+            "goldbilling": {
+                "name": "goldbilling",
+                "version": "1.0.0",
+                "packageType": "studio-package"
+            }
+        },
+        "parentDeps": {
+            "goldbilling": "1.0.0"
+        }
     }
 }

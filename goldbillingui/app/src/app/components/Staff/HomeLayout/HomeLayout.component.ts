@@ -10,11 +10,13 @@ import {
   EventEmitter,
   SimpleChanges,
   OnChanges,
+  AfterViewInit,
+  ViewChild,
+  ViewChildren,
 } from '@angular/core'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { __NEU_ServiceInvokerService__ } from 'app/n-services/service-caller.service'; //_splitter_
-import { HTTPService } from 'app/sd-services/HTTPService'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -55,7 +57,7 @@ export class HomeLayoutComponent {
 
   sd_BjskyfLKhShwRaje(bh) {
     try {
-      bh = this.sd_FHRWJRmgXgJUNEqS(bh);
+      bh = this.sd_r48K5GMhWrk97nFw_1(bh);
       //appendnew_next_sd_BjskyfLKhShwRaje
       return bh;
     } catch (e) {
@@ -65,27 +67,48 @@ export class HomeLayoutComponent {
 
   //appendnew_flow_HomeLayoutComponent_start
 
-  sd_FHRWJRmgXgJUNEqS(bh) {
+  sd_r48K5GMhWrk97nFw_1(bh) {
     try {
-      bh = this.sd_G7bFj7kckghwHLDB(bh);
-      //appendnew_next_sd_FHRWJRmgXgJUNEqS
+      const page = this.page;
+      bh.local.navbar = [
+        {
+          icon: 'fa-solid fa-house',
+          name: 'Home',
+          url: '/home/home',
+        },
+        {
+          icon: 'fa-solid fa-qrcode',
+          name: 'Scan',
+          url: '/home/scanner',
+        },
+        {
+          icon: 'fa-solid fa-cart-shopping',
+          name: 'Cart',
+          url: '/home/cart',
+        },
+        {
+          icon: 'fa-solid fa-user',
+          name: 'User',
+          url: '/home/profile',
+        },
+      ];
+
+      bh = this.sd_RJb1UOQxOSrlX90G_1(bh);
+      //appendnew_next_sd_r48K5GMhWrk97nFw_1
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_FHRWJRmgXgJUNEqS');
+      return this.errorHandler(bh, e, 'sd_3ZKW9eaWU6Cw8qS0');
     }
   }
 
-  async sd_G7bFj7kckghwHLDB(bh) {
+  sd_RJb1UOQxOSrlX90G_1(bh) {
     try {
-      const HTTPServiceInstance: HTTPService =
-        this.__page_injector__.get(HTTPService);
+      this.page.navbar = bh.local.navbar;
 
-      let outputVariables = await HTTPServiceInstance.routesCheck();
-
-      //appendnew_next_sd_G7bFj7kckghwHLDB
+      //appendnew_next_sd_RJb1UOQxOSrlX90G_1
       return bh;
     } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_G7bFj7kckghwHLDB');
+      return this.errorHandler(bh, e, 'sd_3K9ZX36Wy3r4b51H');
     }
   }
 

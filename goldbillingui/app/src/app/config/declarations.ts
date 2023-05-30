@@ -19,23 +19,8 @@ window['neutrinos'] = {
 import { BillComponent } from '../components/Staff/ProfilePage/Bill.component';
 //CORE_REFERENCE_IMPORT-OrdersComponent
 import { OrdersComponent } from '../components/Staff/ProfilePage/Orders.component';
-//CORE_REFERENCE_IMPORT-AddSalesManComponent
-import { AddSalesManComponent } from '../components/Admin/AddSalesMan.component';
-//CORE_REFERENCE_IMPORT-ViewAllProductsComponent
-import { ViewAllProductsComponent } from '../components/Admin/AdminHomePage/ViewAllProducts.component';
-//CORE_REFERENCE_IMPORT-HomeComponent
-import { HomeComponent } from '../components/Admin/AdminHomePage/Home.component';
-//CORE_REFERENCE_IMPORT-ViewOrdersComponent
-import { ViewOrdersComponent } from '../components/Admin/ViewOrders.component';
-//CORE_REFERENCE_IMPORT-AdminLoginComponent
-import { AdminLoginComponent } from '../components/Admin/AdminLogin.component';
 //CORE_REFERENCE_IMPORT-OrderPlcComponent
 import { OrderPlcComponent } from '../components/Staff/OrderPlaced/OrderPlc.component';
-//CORE_REFERENCE_IMPORT-ManualCodeComponent
-import { ManualCodeComponent } from '../components/Staff/Scanner/ManualCode.component';
-
-//CORE_REFERENCE_IMPORT-LoadingComponent
-import { LoadingComponent } from '../components/Loading/Loading.component';
 
 //CORE_REFERENCE_IMPORT-HomePageComponent
 import { HomePageComponent } from '../components/Staff/HomePage/HomePage.component';
@@ -48,12 +33,6 @@ import { HTTPService } from '../sd-services/HTTPService';
 import { ProfileComponent } from '../components/Staff/ProfilePage/Profile.component';
 //CORE_REFERENCE_IMPORT-LoginComponent
 import { LoginComponent } from '../components/Auth/Login.component';
-//CORE_REFERENCE_IMPORT-addProductsComponent
-import { addProductsComponent } from '../components/Admin/addProducts.component';
-//CORE_REFERENCE_IMPORT-NavbarAdminComponent
-import { NavbarAdminComponent } from '../components/Admin/NavbarAdmin.component';
-//CORE_REFERENCE_IMPORT-AdminHomeComponent
-import { AdminHomeComponent } from '../components/Admin/AdminHome.component';
 //CORE_REFERENCE_IMPORT-ScannerPageComponent
 import { ScannerPageComponent } from '../components/Staff/Scanner/ScannerPage.component';
 //CORE_REFERENCE_IMPORT-DetailsComponent
@@ -64,8 +43,6 @@ import { ProductListComponent } from '../components/Staff/ProductCart/ProductLis
 import { CartDetailsComponent } from '../components/Staff/ProductCart/CartDetails.component';
 //CORE_REFERENCE_IMPORT-CartComponent
 import { CartComponent } from '../components/Staff/ProductCart/Cart.component';
-//CORE_REFERENCE_IMPORT-NavbarComponent
-import { NavbarComponent } from '../components/Staff/Navbar/Navbar.component';
 //CORE_REFERENCE_IMPORT-HomeLayoutComponent
 import { HomeLayoutComponent } from '../components/Staff/HomeLayout/HomeLayout.component';
 //CORE_REFERENCE_IMPORT-ProductsList
@@ -106,23 +83,8 @@ export const appDeclarations = [
   BillComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-OrdersComponent
   OrdersComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-AddSalesManComponent
-  AddSalesManComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-ViewAllProductsComponent
-  ViewAllProductsComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-HomeComponent
-  HomeComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-ViewOrdersComponent
-  ViewOrdersComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-AdminLoginComponent
-  AdminLoginComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-OrderPlcComponent
   OrderPlcComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-ManualCodeComponent
-  ManualCodeComponent,
-
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-LoadingComponent
-  LoadingComponent,
 
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-HomePageComponent
   HomePageComponent,
@@ -133,12 +95,6 @@ export const appDeclarations = [
   ProfileComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-LoginComponent
   LoginComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-addProductsComponent
-  addProductsComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-NavbarAdminComponent
-  NavbarAdminComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-AdminHomeComponent
-  AdminHomeComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-ScannerPageComponent
   ScannerPageComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-DetailsComponent
@@ -149,8 +105,6 @@ export const appDeclarations = [
   CartDetailsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-CartComponent
   CartComponent,
-  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-NavbarComponent
-  NavbarComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-HomeLayoutComponent
   HomeLayoutComponent,
 ];
@@ -188,11 +142,7 @@ export const appRoutes = [
     children: [
       { path: 'details', component: DetailsComponent },
       { path: 'cart', component: CartComponent },
-      {
-        path: 'scanner',
-        component: ScannerPageComponent,
-        children: [{ path: 'enter-id', component: ManualCodeComponent }],
-      },
+      { path: 'scanner', component: ScannerPageComponent },
       { path: 'profile', component: ProfileComponent },
       { path: 'customer', component: CustomerDetailsComponent },
       { path: 'home', component: HomePageComponent },
@@ -201,23 +151,7 @@ export const appRoutes = [
       { path: 'orders', component: OrdersComponent },
     ],
   },
-  {
-    path: 'admin',
-    component: AdminHomeComponent,
-    children: [
-      { path: 'add-products', component: addProductsComponent },
-      {
-        path: 'home',
-        component: HomeComponent,
-        children: [
-          { path: 'all-products', component: ViewAllProductsComponent },
-        ],
-      },
-      { path: 'orders', component: ViewOrdersComponent },
-    ],
-  },
   { path: 'login', component: LoginComponent },
-  { path: 'admin-log', component: AdminLoginComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];

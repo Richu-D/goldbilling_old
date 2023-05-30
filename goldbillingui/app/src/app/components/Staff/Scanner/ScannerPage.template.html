@@ -1,25 +1,23 @@
-<div fxLayout="column wrap" class="qr-scanner" fxLayoutAlign="center center" [fxShow]="true">
-  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-    <div html style="padding:10px;margin:10px;">
-      <div (click)="action.isStart ? action.stop() : action.start()">
-        <ngx-scanner-qrcode #action="scanner" (data)="page.output = ($event)" (error)="onError($event)">
-        </ngx-scanner-qrcode>
-        <!-- data  -->
-      </div>
-      <div style="text-align:left; margin-top: 10px; margin-left: 5px; ">
-        <div>
-          <span *ngIf="action?.data?.value[0]?.value">{{scannedData(action?.data?.value[0]?.value)}}</span><!-- value -->
-          <!-- <span>{{ action.data | async | json }}</span> -->
-          <!-- async -->
-          <!-- Loading -->
-          <!-- <p *ngIf="action.isLoading">⌛ Loading...</p> -->
-        </div>
-        <!-- start -->
-        <!-- <button (click)="action.isStart ? action.stop() : action.start()" class="scanner-btn">{{action.isStart ? 'Stop' : 'Start'}}</button> -->
-      </div>
-      <br>
+<div fxLayout="column " style="width:100%;" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div html>
+    <div (click)="toggleCamera_2(action,$event)">
+      <ngx-scanner-qrcode style="border-radius:20px;height:600px;overflow:hidden;margin:20px" #action="scanner" (event)="qrResult_2($event)" (data)="page.output = ($event)" (error)="onError($event)">
+      </ngx-scanner-qrcode>
     </div>
-    <div fxLayout="row wrap" class="product-name" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-button style="font-weight: 700; font-size: 18px;" (click)="enterTheCodeManually()">Enter the code manually</button></div>
-    <div fxLayout="row wrap" style="height: 80px;" fxLayoutAlign="center stretch" [fxShow]="true"><router-outlet></router-outlet></div>
+    <div style="text-align:left; margin-top: 10px; margin-left: 5px; ">
+    </div>
+    <br>
+  </div>
+  <div *ngIf="true">
+    <div fxLayout="row wrap" class="product-name" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-button style="font-weight: 700; font-size: 18px;" color="black" (click)="toggleManualCodeInput_2()">Enter the code manually</button></div>
+    <div fxLayout="row wrap" style="height: 80px;" fxLayoutAlign="center stretch" [fxShow]="true" *ngIf="page.showManualQRCodeInput">
+      <form [formGroup]="page.addRegisterForm" style="width: 100%" (ngSubmit)="getScannedProduct_2()">
+        <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-evenly stretch" [fxShow]="true">
+          <mat-form-field [appearance]="&apos;legacy&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput placeholder="Enter Code" [required]="false" formControlName="id">
+          </mat-form-field><button mat-button color="primary" class="scan-id-button">Submit</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

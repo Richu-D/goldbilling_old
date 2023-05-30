@@ -8,6 +8,8 @@ import {
   Input,
   Output,
   EventEmitter,
+  SimpleChanges,
+  OnChanges,
   AfterViewInit,
   ViewChild,
   ViewChildren,
@@ -114,25 +116,10 @@ export class CartComponent {
 
   sd_Eqa6qz3aaqkZa3kk(bh) {
     try {
-      bh = this.sd_NzqjEmAKsn4hP7bL(bh);
       //appendnew_next_sd_Eqa6qz3aaqkZa3kk
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_Eqa6qz3aaqkZa3kk');
-    }
-  }
-
-  async sd_NzqjEmAKsn4hP7bL(bh) {
-    try {
-      const HTTPServiceInstance: HTTPService =
-        this.__page_injector__.get(HTTPService);
-
-      let outputVariables = await HTTPServiceInstance.routesCheck();
-
-      //appendnew_next_sd_NzqjEmAKsn4hP7bL
-      return bh;
-    } catch (e) {
-      return await this.errorHandler(bh, e, 'sd_NzqjEmAKsn4hP7bL');
     }
   }
 

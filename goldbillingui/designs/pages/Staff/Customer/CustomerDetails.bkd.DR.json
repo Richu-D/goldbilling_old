@@ -466,7 +466,6 @@
                         "paletteKey": "NG-Input",
                         "parentEditorKey": "23b5e96f-6999-4f9e-3a0f-47715ffbfd1b",
                         "isAdvancedComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -644,7 +643,6 @@
                         "paletteKey": "NG-Input",
                         "parentEditorKey": "23b5e96f-6999-4f9e-3a0f-47715ffbfd1b",
                         "isAdvancedComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {

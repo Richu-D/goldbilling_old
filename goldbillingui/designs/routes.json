@@ -14,13 +14,7 @@
                 },
                 {
                     "path": "scanner",
-                    "component": "ScannerPageComponent",
-                    "children": [
-                        {
-                            "path": "enter-id",
-                            "component": "ManualCodeComponent"
-                        }
-                    ]
+                    "component": "ScannerPageComponent"
                 },
                 {
                     "path": "profile",
@@ -49,36 +43,8 @@
             ]
         },
         {
-            "path": "admin",
-            "component": "AdminHomeComponent",
-            "children": [
-                {
-                    "path": "add-products",
-                    "component": "addProductsComponent"
-                },
-                {
-                    "component": "HomeComponent",
-                    "path": "home",
-                    "children": [
-                        {
-                            "path": "all-products",
-                            "component": "ViewAllProductsComponent"
-                        }
-                    ]
-                },
-                {
-                    "path": "orders",
-                    "component": "ViewOrdersComponent"
-                }
-            ]
-        },
-        {
             "path": "login",
             "component": "LoginComponent"
-        },
-        {
-            "path": "admin-log",
-            "component": "AdminLoginComponent"
         },
         {
             "path": "''",

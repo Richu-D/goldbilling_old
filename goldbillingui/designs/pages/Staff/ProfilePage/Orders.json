@@ -207,10 +207,16 @@
         "nodeType": "flow",
         "name": "",
         "path": "/home/bill",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
         "qparamsMap": {
             "type": "bh.input",
             "value": "params"
         },
+        "qparamsArray": "",
+        "resultMapping": "",
         "functionName": "sd_bDDFyFWhgoQDUggJ",
         "category": "Navigation",
         "x": 400,

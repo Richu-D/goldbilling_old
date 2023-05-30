@@ -185,7 +185,6 @@
                     "paletteKey": "Html5",
                     "parentEditorKey": "f02fd75a-7c75-2e06-0c1b-04dad26f0c63",
                     "isAdvancedComponent": true,
-                    "isCommented": "false",
                     "commentid": null,
                     "designerReference": [
                         {
@@ -373,7 +372,6 @@
                         "paletteKey": "html-editor",
                         "parentEditorKey": "df7b8e6c-bfae-e3c8-2963-db1373720e27",
                         "isAdvancedChildComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -545,7 +543,6 @@
                         "paletteKey": "Html5",
                         "parentEditorKey": "e0550304-97fc-dd34-ea1b-380c7974c164",
                         "isAdvancedComponent": true,
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -733,7 +730,6 @@
                             "paletteKey": "html-editor",
                             "parentEditorKey": "55070c6a-6496-268f-350e-4368780eec8e",
                             "isAdvancedChildComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {

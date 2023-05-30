@@ -1,15 +1,8 @@
 {
-    "7ecd4534-4ca9-4bed-c54f-ccf77e03224a": {
-        "paletteKey": "FlexLayoutCol",
+    "27f18dc1-3b3b-c984-3ce9-03797bfd2c9e": {
+        "paletteKey": "NEUTRINOS_PACKAGE_goldbilling_PALETTE_KEY_QRscanner",
         "commentid": null,
         "designerReference": [
-            {
-                "_key": "componentLabel",
-                "_value": "Column",
-                "_type": "kv",
-                "_attrDef": "p",
-                "_useAsLabel": true
-            },
             {
                 "_key": "style",
                 "_value": "",
@@ -18,550 +11,168 @@
             },
             {
                 "_key": "class",
-                "_value": [
-                    "qr-scanner"
-                ],
+                "_value": "",
                 "_type": "dav",
                 "_attrDef": "p"
             },
             {
-                "_key": "fxFlex",
+                "_key": "componentLabel",
+                "_value": "QRscanner",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "_key": "(click)",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "_key": "[disabled]",
                 "_value": "",
                 "_type": "kv",
                 "_attrDef": "p"
             },
             {
-                "_key": "fxLayoutGap",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p"
-            },
-            {
-                "_key": "wrap",
-                "_value": "wrap",
-                "_type": "a",
-                "_attrDef": "p"
-            },
-            {
-                "_key": "layoutAlign",
-                "_value": "center",
-                "_type": "a",
-                "_attrDef": "p"
-            },
-            {
-                "_key": "pLayoutAlign",
-                "_value": "center",
-                "_type": "a",
-                "_attrDef": "p"
-            },
-            {
-                "_key": "[fxShow]",
+                "_key": "showManualKeyEnterOption",
                 "_value": "true",
-                "_type": "kv",
-                "_attrDef": "p"
-            }
-        ],
-        "d86afb48-5587-bf0a-807e-77c4bf29dfc2": {
-            "paletteKey": "FlexLayoutCol",
-            "parentEditorKey": "7ecd4534-4ca9-4bed-c54f-ccf77e03224a",
-            "commentid": null,
-            "designerReference": [
-                {
-                    "_key": "componentLabel",
-                    "_value": "Column",
-                    "_type": "kv",
-                    "_attrDef": "p",
-                    "_useAsLabel": true
-                },
-                {
-                    "_key": "style",
-                    "_value": "",
-                    "_type": "kv",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "class",
-                    "_value": "",
-                    "_type": "dav",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "fxFlex",
-                    "_value": "",
-                    "_type": "kv",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "fxLayoutGap",
-                    "_value": "",
-                    "_type": "kv",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "wrap",
-                    "_value": "wrap",
-                    "_type": "a",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "layoutAlign",
-                    "_value": "start",
-                    "_type": "a",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "pLayoutAlign",
-                    "_value": "stretch",
-                    "_type": "a",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "[fxShow]",
-                    "_value": "true",
-                    "_type": "kv",
-                    "_attrDef": "p"
-                }
-            ],
-            "5a7303cd-8775-7e51-ea29-bdb49285d6ab": {
-                "paletteKey": "Html5",
-                "parentEditorKey": "d86afb48-5587-bf0a-807e-77c4bf29dfc2",
-                "isAdvancedComponent": true,
-                "commentid": null,
-                "designerReference": [
-                    {
-                        "_key": "style",
-                        "_value": "padding:10px;margin:10px;",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "class",
-                        "_value": "",
-                        "_type": "dav",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "htmlElement",
-                        "_value": "div",
-                        "_type": "dav",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "html",
-                        "_value": "<div>\r\n\t<ngx-scanner-qrcode #action=\"scanner\" (data)=\"page.output = ($event)\" (error)=\"onError($event)\">\r\n\t</ngx-scanner-qrcode>\r\n\t<!-- data  -->\r\n</div>\r\n<div style=\"text-align:center;\">\r\n\t<div>\r\n\t\t<span>{{ action.data.value | json }}</span><!-- value -->\r\n\t\t<span>{{ action.data | async | json }}</span><!-- async -->\r\n\t\t<!-- Loading -->\r\n\t\t<p *ngIf=\"action.isLoading\">⌛ Loading...</p>\r\n\t</div>\r\n\t<!-- start -->\r\n\t<button (click)=\"action.isStart ? action.stop() : action.start()\" class=\"scanner-btn\">{{action.is\r\nStart ? action.stop() : action.start()\" class=\"scanner-btn\">{{action.isStart ? 'Stop' : 'Start'}}</button>\r\n</div>\r\n<br>\r\n",
-                        "_type": "a",
-                        "_attrDef": "c"
-                    },
-                    {
-                        "_key": "tagType",
-                        "_value": "",
-                        "_type": "a",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "name",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "sandbox",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "src",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "srcdoc",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "width",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "[autoplay]",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "[loop]",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "data",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "audioSource",
-                        "_value": [],
-                        "_type": "a",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "videoSource",
-                        "_value": [],
-                        "_type": "a",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "audioDatasource",
-                        "_value": "",
-                        "_type": "a",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "audioSrc",
-                        "_value": "",
-                        "_type": "a",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "audioType",
-                        "_value": "",
-                        "_type": "a",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "videoDatasource",
-                        "_value": "",
-                        "_type": "a",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "videoSrc",
-                        "_value": "",
-                        "_type": "a",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "videoType",
-                        "_value": "",
-                        "_type": "a",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "(audioplay)",
-                        "_value": "",
-                        "_type": "a",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "(videoplay)",
-                        "_value": "",
-                        "_type": "a",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "(audiopause)",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "(videopause)",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "(audioended)",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    },
-                    {
-                        "_key": "(videoended)",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_visibility": false
-                    }
-                ],
-                "af21afbd-c5c4-30e9-cc4c-b99635a41db0": {
-                    "paletteKey": "html-editor",
-                    "parentEditorKey": "5a7303cd-8775-7e51-ea29-bdb49285d6ab",
-                    "isAdvancedChildComponent": true,
-                    "commentid": null,
-                    "designerReference": [
-                        {
-                            "_key": "style",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "class",
-                            "_value": "",
-                            "_type": "dav",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "html",
-                            "_value": "<div (click)=\"action.isStart ? action.stop() : action.start()\">\r\n    <ngx-scanner-qrcode #action=\"scanner\" (data)=\"page.output = ($event)\" (error)=\"onError($event)\">\r\n    </ngx-scanner-qrcode>\r\n    <!-- data  -->\r\n</div>\r\n<div style=\"text-align:left; margin-top: 10px; margin-left: 5px; \">\r\n    <div>\r\n        <span *ngIf=\"action?.data?.value[0]?.value\">{{scannedData(action?.data?.value[0]?.value)}}</span><!-- value -->\r\n        <!-- <span>{{ action.data | async | json }}</span> -->\r\n        <!-- async -->\r\n        <!-- Loading -->\r\n        <!-- <p *ngIf=\"action.isLoading\">⌛ Loading...</p> -->\r\n    </div>\r\n    <!-- start -->\r\n    <!-- <button (click)=\"action.isStart ? action.stop() : action.start()\" class=\"scanner-btn\">{{action.isStart ? 'Stop' : 'Start'}}</button> -->\r\n</div>\r\n<br>",
-                            "_type": "a",
-                            "_attrDef": "p"
-                        }
-                    ]
+                "_type": "a",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "_key": "toggleCamera",
+                "_value": "toggleCamera_2(action,$event)",
+                "_type": "a",
+                "_attrDef": "p",
+                "_useAsLabel": true,
+                "value": "toggleCamera_2(action,$event)",
+                "_customAttributeFlag": "flowpicker",
+                "objValue": {
+                    "activeTree": "pages",
+                    "functionName": "toggleCamera_2",
+                    "input": [
+                        "action",
+                        "$event"
+                    ],
+                    "nodeID": "sd_f7bBd4YWhqVWq6Cn",
+                    "z": "sd_277MOqrVDiPJ9VN4"
                 }
             },
-            "45efbd2b-1270-3824-493a-660e99aa984e": {
-                "paletteKey": "FlexLayoutRow",
-                "parentEditorKey": "d86afb48-5587-bf0a-807e-77c4bf29dfc2",
-                "commentid": null,
-                "designerReference": [
-                    {
-                        "_key": "componentLabel",
-                        "_value": "Row",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_useAsLabel": true
-                    },
-                    {
-                        "_key": "style",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "class",
-                        "_value": [
-                            "product-name"
-                        ],
-                        "_type": "dav",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "fxFlex",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "fxLayoutGap",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "wrap",
-                        "_value": "wrap",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "layoutAlign",
-                        "_value": "start",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "pLayoutAlign",
-                        "_value": "stretch",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "[fxShow]",
-                        "_value": "true",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    }
-                ],
-                "ba9e3935-a7ba-761b-dad0-2d15a9f9a8c2": {
-                    "paletteKey": "NG-button",
-                    "parentEditorKey": "45efbd2b-1270-3824-493a-660e99aa984e",
-                    "commentid": null,
-                    "designerReference": [
-                        {
-                            "_key": "style",
-                            "_value": "font-weight: 700; font-size: 18px;",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "class",
-                            "_value": "",
-                            "_type": "dav",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "buttonname",
-                            "_value": "Enter the code manually",
-                            "_type": "a",
-                            "_attrDef": "p",
-                            "_useAsLabel": true
-                        },
-                        {
-                            "_key": "color",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "(click)",
-                            "_value": "enterTheCodeManually()",
-                            "_type": "kv",
-                            "_attrDef": "p",
-                            "objValue": {
-                                "nodeID": "sd_2X6qpiE9ClSFjJya",
-                                "functionName": "enterTheCodeManually",
-                                "activeTree": "pages",
-                                "z": "sd_277MOqrVDiPJ9VN4",
-                                "input": []
-                            }
-                        },
-                        {
-                            "_key": "[disabled]",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "[disableRipple]",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "type",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "routerLink",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        }
-                    ]
+            {
+                "_key": "toggleManualCodeInput",
+                "_value": "toggleManualCodeInput_2()",
+                "_type": "a",
+                "_attrDef": "p",
+                "_useAsLabel": true,
+                "value": "toggleManualCodeInput_2()",
+                "_customAttributeFlag": "flowpicker",
+                "objValue": {
+                    "activeTree": "pages",
+                    "functionName": "toggleManualCodeInput_2",
+                    "input": [],
+                    "nodeID": "sd_7Mh03wJG1PuLlOn3",
+                    "z": "sd_277MOqrVDiPJ9VN4"
                 }
             },
-            "628a971c-4496-2328-636e-ad4a5a132c45": {
-                "paletteKey": "FlexLayoutRow",
-                "parentEditorKey": "d86afb48-5587-bf0a-807e-77c4bf29dfc2",
-                "commentid": null,
-                "designerReference": [
-                    {
-                        "_key": "componentLabel",
-                        "_value": "Row",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_useAsLabel": true
-                    },
-                    {
-                        "_key": "style",
-                        "_value": "height: 80px;",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "class",
-                        "_value": "",
-                        "_type": "dav",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "fxFlex",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "fxLayoutGap",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "wrap",
-                        "_value": "wrap",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "layoutAlign",
-                        "_value": "center",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "pLayoutAlign",
-                        "_value": "stretch",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "[fxShow]",
-                        "_value": "true",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    }
-                ],
-                "1a3061e8-2568-f871-15a6-f956378ed1ab": {
-                    "paletteKey": "NG-RouterOutlet",
-                    "parentEditorKey": "628a971c-4496-2328-636e-ad4a5a132c45",
-                    "commentid": null,
-                    "designerReference": [
-                        {
-                            "_key": "componentLabel",
-                            "_value": "Router Outlet",
-                            "_type": "kv",
-                            "_attrDef": "p",
-                            "_useAsLabel": true
-                        },
-                        {
-                            "_key": "(activate)",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        },
-                        {
-                            "_key": "(deactivate)",
-                            "_value": "",
-                            "_type": "kv",
-                            "_attrDef": "p"
-                        }
-                    ]
+            {
+                "_key": "qrResult",
+                "_value": "qrResult_2($event)",
+                "_type": "a",
+                "_attrDef": "p",
+                "_useAsLabel": true,
+                "value": "qrResult_2($event)",
+                "_customAttributeFlag": "flowpicker",
+                "objValue": {
+                    "activeTree": "pages",
+                    "functionName": "qrResult_2",
+                    "input": [
+                        "event"
+                    ],
+                    "nodeID": "sd_euHZcLMJ7ZEZ32G2",
+                    "z": "sd_277MOqrVDiPJ9VN4"
                 }
+            },
+            {
+                "_key": "getScannedProduct",
+                "_value": "getScannedProduct_2()",
+                "_type": "a",
+                "_attrDef": "p",
+                "_useAsLabel": true,
+                "value": "getScannedProduct_2()",
+                "_customAttributeFlag": "flowpicker",
+                "objValue": {
+                    "activeTree": "pages",
+                    "functionName": "getScannedProduct_2",
+                    "input": [
+                        "scannedId"
+                    ],
+                    "nodeID": "sd_tC8PaCwp7wLqyKEU",
+                    "z": "sd_277MOqrVDiPJ9VN4"
+                }
+            },
+            {
+                "_key": "height",
+                "_value": "600px",
+                "_type": "a",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "_key": "borderRadius",
+                "_value": "20px",
+                "_type": "a",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "_key": "margin",
+                "_value": "20px",
+                "_type": "a",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "_key": "formfieldAppearance",
+                "_value": "legacy",
+                "_type": "a",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "_key": "color",
+                "_value": "primary",
+                "_type": "a",
+                "_attrDef": "p",
+                "_useAsLabel": true
+            },
+            {
+                "skipCodegen": true,
+                "_key": "__n_dependant_flows_key__",
+                "_value": [
+                    "sd_L3L0hhvCRf5dKgNZ",
+                    "sd_yFifZVnrL73o30wC",
+                    "sd_7Mh03wJG1PuLlOn3",
+                    "sd_NE5w7mCbt5kiQyqW",
+                    "sd_Akmf4Nj17D0BzRR6",
+                    "sd_f7bBd4YWhqVWq6Cn",
+                    "sd_NzE2CqQf7mqdZbii",
+                    "sd_pT5Juurx805alDPR",
+                    "sd_vTRDpRDd60S8QBbn",
+                    "sd_tC8PaCwp7wLqyKEU",
+                    "sd_SQXQyvRfpYpa4Lyv",
+                    "sd_FQbN0PIGSElsgvFS",
+                    "sd_ytjsGMbAhT49i89l",
+                    "sd_euHZcLMJ7ZEZ32G2",
+                    "sd_UerXobRedI1SvdHu",
+                    "sd_Z0UjwPHsNMMeujj9"
+                ],
+                "_type": "a",
+                "_attrDef": "c",
+                "_visibility": false
             }
-        }
+        ]
     }
 }
