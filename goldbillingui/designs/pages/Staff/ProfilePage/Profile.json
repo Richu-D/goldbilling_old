@@ -433,5 +433,98 @@
         "generateNext": false,
         "serviceName": "ProfileComponent",
         "generated": true
+    },
+    {
+        "id": "sd_fwJEWAHhoEdsMzOf",
+        "type": "PageStart",
+        "z": "sd_wHGIpBBLDR91Bzlx",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "logout",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "logout",
+        "category": "General",
+        "x": 80,
+        "y": 220,
+        "wires": [
+            [
+                "sd_S5GNrkcQzOrYlAxO"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "ProfileComponent"
+    },
+    {
+        "id": "sd_S5GNrkcQzOrYlAxO",
+        "type": "Script",
+        "z": "sd_wHGIpBBLDR91Bzlx",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.local.url = \"http://localhost:8081/api/logout\"",
+        "functionName": "sd_S5GNrkcQzOrYlAxO",
+        "category": "Function",
+        "x": 200,
+        "y": 220,
+        "wires": [
+            [
+                "sd_TXewpPJXSWZXEzVI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ProfileComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_TXewpPJXSWZXEzVI",
+        "type": "HttpRequest",
+        "z": "sd_wHGIpBBLDR91Bzlx",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "get",
+        "methodMappingObj": {},
+        "urlMapping": "bh.local.url",
+        "urlMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": ""
+        },
+        "resultMapping": "bh.local.result",
+        "resultMappingObj": {
+            "mapVarType": "bh.local",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "sd_TXewpPJXSWZXEzVI",
+        "category": "HTTP",
+        "x": 340,
+        "y": 220,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "ProfileComponent",
+        "generated": true
     }
 ]

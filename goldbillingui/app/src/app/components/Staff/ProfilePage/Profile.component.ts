@@ -92,6 +92,21 @@ export class ProfileComponent {
     }
   }
 
+  logout(...others) {
+    try {
+      var bh: any = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+
+      bh = this.sd_S5GNrkcQzOrYlAxO(bh);
+      //appendnew_next_logout
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_fwJEWAHhoEdsMzOf');
+    }
+  }
+
   //appendnew_flow_ProfileComponent_start
 
   sd_pEf7YYcls7IHRyio(bh) {
@@ -135,6 +150,38 @@ export class ProfileComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_QbXUsqsGwUy7u5a1');
+    }
+  }
+
+  sd_S5GNrkcQzOrYlAxO(bh) {
+    try {
+      const page = this.page;
+      bh.local.url = 'http://localhost:8081/api/logout';
+
+      bh = this.sd_TXewpPJXSWZXEzVI(bh);
+      //appendnew_next_sd_S5GNrkcQzOrYlAxO
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_S5GNrkcQzOrYlAxO');
+    }
+  }
+
+  async sd_TXewpPJXSWZXEzVI(bh) {
+    try {
+      let requestOptions = {
+        url: bh.local.url,
+        method: 'get',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: undefined,
+      };
+      bh.local.result = await this.sdService.nHttpRequest(requestOptions);
+
+      //appendnew_next_sd_TXewpPJXSWZXEzVI
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_TXewpPJXSWZXEzVI');
     }
   }
 
